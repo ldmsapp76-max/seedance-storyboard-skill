@@ -1,0 +1,4 @@
+interface:
+  display_name: "Seedance Storyboard"
+  short_description: "Script to Seedance storyboard and sketch plans"
+  default_prompt: "Use $seedance-storyboard to convert this script into a continuity-safe storyboard, Seedance 2.0 segment plan, and optional storyboard sketch briefs."
