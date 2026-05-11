@@ -16,6 +16,8 @@ Use this skill to turn a script into a complete storyboard package for AI-human 
 5. Write continuity handoffs for every segment: first-frame anchor, last-frame anchor, carried props, body position, gaze direction, camera relation, and transition logic.
 6. Produce Seedance-ready prompts only after the shot plan is internally consistent.
 7. When the user asks for storyboard sketches, create sketch briefs after the Seedance prompts are stable. Use the locked shot plan and segment anchors as the source of truth; do not invent new blocking, props, costumes, or camera angles for the sketches.
+   - For Image 2.0 sketch workflows, generate rough visual panels separately, then build readable notes, shot metadata, and character-position diagrams in deterministic HTML/SVG.
+   - For multi-panel generated sketch sheets, slice the sheet into standalone per-shot panel images before placing them in HTML; do not rely on CSS cropping from the full sheet.
 8. Run a content QA pass against the source script before finalizing. Check story fidelity, causal logic, spatial continuity, character behavior, prompt generability, sketch usefulness, and Seedance hallucination risks.
 9. If the storyboard is saved to a Markdown file, run `scripts/validate_storyboard.py <file>` and fix flagged duration or anchor issues.
 

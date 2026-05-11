@@ -69,6 +69,34 @@ Rules:
 
 ## Deterministic SVG/HTML Workflow
 
+### Image-Model Sketch Plus HTML/SVG Layout
+
+Use this pattern when the user asks for Image 2.0 sketches together with readable director notes, shot text, or character-position diagrams.
+
+- Let the image model generate only the rough visual storyboard art. Do not ask it to render long Chinese notes, dialogue, shot IDs, tables, CAM labels, or relationship diagrams.
+- Put all production text, shot IDs, dialogue/audio notes, `CAM`, `FOV`, arrows, character labels, and top-down blocking diagrams in deterministic HTML/SVG.
+- For a desktop review page, prefer a wide working layout over a narrow phone-sheet layout. Use nearly full browser width, keep the sketch column large, and place notes plus the SVG blocking diagram beside it.
+- If the user asks for every shot, split image generation into small storyboard sheets, usually 4-5 panels per generated image. Do not force all shots into one generated image.
+- Avoid background music fields in the generated director page unless the user explicitly asks for music. For Seedance-oriented outputs, keep audio to character voice, environment sound, and action sound effects.
+
+### Generated Sheet Cropping Rules
+
+When a generated storyboard image contains multiple stacked panels, do not rely on CSS cropping from the full sheet in the final HTML.
+
+Preferred workflow:
+
+1. Save the original generated sheet under a `sketches/` directory.
+2. Slice it into one standalone image per shot or panel under a `panels/` directory.
+3. Reference the standalone panel images from HTML. This avoids browser zoom, aspect-ratio, and percentage-offset errors.
+4. Keep a small panel-check HTML page when useful so the user can inspect all slices quickly.
+
+Cropping cautions:
+
+- Do not assume all generated panels are equal height. Image models often create uneven panel heights even when the prompt asks for equal stacked panels.
+- Find the real horizontal divider positions by inspection or image analysis, then crop with those coordinates.
+- For each page, record the panel split coordinates if manual correction was needed.
+- Validate the final HTML references panel images directly, not the full generated sheet. There should be one panel reference per shot.
+
 Use this workflow when the user asks for clear text, consistent layout, readable Chinese labels, or "先生成草图/站位图，再叠加真实文字".
 
 1. Generate or draw the visual parts separately: storyboard sketch area, top-down blocking diagram, camera position, camera direction, and FOV.
