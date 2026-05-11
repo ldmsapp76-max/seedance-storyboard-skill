@@ -16,6 +16,8 @@ These notes summarize prior user examples and prompts. Use them as calibration, 
 ## What To Improve
 
 - Do not copy the old prompt's bulk. The repeated camera/face/audio boilerplate made outputs heavy and harder to inspect.
+- When sample spreadsheets include a `BGM` column, treat it as legacy reference only. Do not carry BGM into Seedance director storyboards or prompts unless the user explicitly asks for music. The default audio policy is: no background music, only character voice, environment sound, and action sound effects.
+- If a user asks for a director storyboard web page, do not expose legacy BGM notes in each shot card. Keep the page aligned with the no-background-music rule.
 - Separate levels clearly: episode beat, Seedance segment, shot, prompt, handoff. Older examples sometimes mix "镜号", "视频", and "分镜".
 - Resolve conflicts consistently. Some older spreadsheet rows include BGM even though the Seedance rule says no background music; for Seedance prompts, keep `无背景音乐` unless the user explicitly changes the rule.
 - Interpret "禁止字幕" as "do not let Seedance add dialogue subtitles or overlay captions." Normal story-world prop text is allowed when it physically exists on an object and matters to the plot, such as a paper note, signboard, letter, phone screen, price plaque, book cover, or document.
