@@ -1,61 +1,61 @@
-# Script-to-Storyboard Workflow
+# 剧本到分镜工作流
 
-## Intake
+## 输入拆解
 
-Extract these facts before designing shots:
+设计镜头前，先提取这些信息：
 
-- Story goal of the scene or episode.
-- Beat turns: new information, emotional shift, decision, reveal, interruption, physical action.
-- Dialogue that must stay visible on screen.
-- Characters, wardrobe, props, location, time of day, and mood.
-- Physical layout: doors, windows, tables, beds, vehicles, counters, hallways, or other anchors.
-- Required visual evidence: phone screen, document, blood mark, ring, money, medicine, message, photo.
+- 场景或单集的剧情目标。
+- 节拍转折：新信息、情绪变化、决定、揭示、打断、身体动作。
+- 必须保留在画面里的对白。
+- 人物、服装、道具、地点、时间、情绪基调。
+- 物理空间：门、窗、桌子、床、车辆、柜台、走廊或其他空间锚点。
+- 必须被观众看到的视觉证据：手机屏幕、文书、血迹、戒指、钱、药、消息、照片。
 
-If sample scripts are provided, infer:
+如果用户提供样例剧本，还要推断：
 
-- How dense the user's pacing is.
-- Whether they prefer dialogue coverage or action-first coverage.
-- Preferred shot sizes and transitions.
-- Typical number of Seedance segments per scene.
+- 用户偏好的镜头密度。
+- 更偏对白覆盖，还是更偏动作先行。
+- 常用景别和转场方式。
+- 每场戏通常拆成多少个 Seedance 视频段。
 
-## Design Order
+## 设计顺序
 
-1. Split the script into beats before shots.
-2. Assign each beat a viewer question: "What must the audience understand now?"
-3. Choose the simplest shot that makes the beat legible.
-4. Add camera movement only when it clarifies a reveal, power shift, pursuit, or emotional pressure.
-5. Create a shot list with duration estimates.
-6. Group shots into Seedance segments under 15 seconds.
-7. Write segment handoff anchors and generation prompts.
-8. Run a continuity pass, a rhythm pass, then the content QA pass in `content-qa.md`.
+1. 先把剧本拆成节拍，再拆镜头。
+2. 给每个节拍指定一个观众问题：“观众此刻必须理解什么？”
+3. 选择能让节拍最清楚的最简单镜头。
+4. 只有在运镜能帮助揭示、权力变化、追逐或情绪压力时，才加入运镜。
+5. 建立带预估时长的镜头表。
+6. 将镜头组合成不超过 15 秒的 Seedance 视频段。
+7. 写分段交接锚点和生成提示词。
+8. 依次做连续性检查、节奏检查，再按 `content-qa.md` 做内容 QA。
 
-## Shot Design Heuristics
+## 镜头设计经验
 
-- Use establishing shots sparingly in AI真人短剧; often 1-2 seconds is enough if the location is obvious.
-- Let dialogue scenes breathe through shot-reverse-shot, two-shots, inserts, and reaction shots.
-- In public verbal conflict, prioritize close facial coverage and reaction shots after a brief spatial reset.
-- Use close-ups for emotional turns, lies, realizations, threats, and decisions.
-- Use inserts for plot evidence, not decoration.
-- Choose shot size by function: wide for space, medium for blocking, close for performance, insert for evidence.
-- Avoid unmotivated fast cutting; AI-generated human continuity is more reliable when each shot has one clear intent.
-- For complex physical movement, use a wider shot first, then closer coverage after positions are established.
+- AI 真人短剧中，建立镜头要克制；如果地点明显，1-2 秒通常够用。
+- 对白戏通过正反打、双人镜头、插入特写和反应镜头来呼吸。
+- 公开语言冲突中，先短暂重建空间，再重点覆盖面部近景和反应镜头。
+- 情绪转折、撒谎、醒悟、威胁、决定，用近景或特写承载。
+- 插入特写只用于剧情证据，不做装饰。
+- 按功能选择景别：全景交代空间，中景管理走位，近景承载表演，插入特写证明事实。
+- 避免无动机快切；AI 真人连续性在每个镜头只有一个明确意图时更稳定。
+- 复杂身体移动先用较宽镜头建立位置，再切近景覆盖。
 
-## Continuity Pass
+## 连续性检查
 
-For every cut, verify:
+每次剪辑都要确认：
 
-- Who is on which side of frame.
-- Which direction each person is looking.
-- Whether a prop changes hands.
-- Whether a character sits, stands, enters, exits, turns, or crosses the camera axis.
-- Whether the next shot can plausibly follow from the previous last frame.
+- 谁在画面哪一侧。
+- 每个人看向哪里。
+- 道具是否换手。
+- 人物是否坐下、站起、进入、离开、转身或跨越镜头轴线。
+- 下一个镜头是否能合理承接上一个镜头的尾帧。
 
-## Rhythm Pass
+## 节奏检查
 
-Check that the shot pattern fits the scene:
+确认镜头模式符合场景：
 
-- Conflict dialogue: medium close-up / close-up rhythm with occasional two-shot reset.
-- Suspense reveal: hold longer before the reveal, then cut to reaction.
-- Chase or urgent action: shorter shots, but keep geography clear.
-- Intimate confession: fewer cuts, stable camera, longer close-ups.
-- Comedy or reversal: setup shot, timing hold, reaction cut.
+- 冲突对白：中近景 / 近景节奏，偶尔用双人镜头重置空间。
+- 悬念揭示：揭示前多停顿，揭示后切反应。
+- 追逐或紧急动作：镜头可以更短，但地理关系必须清楚。
+- 亲密告白：少剪辑、稳定机位、更长近景。
+- 喜剧或反转：铺垫镜头、节奏停顿、反应剪辑。

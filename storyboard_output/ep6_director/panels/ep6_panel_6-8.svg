@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 640" role="img" aria-label="6-8 转查谢临舟">
+<defs>
+<marker id="arrow-red" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#a75858"/></marker>
+<style>
+.title{font:700 20px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#1f1f1f}
+.sub{font:600 13px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#5f564d}
+.label{font:700 13px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#222}
+.note{font:800 20px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#1f1f1f}
+.tiny{font:600 12px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#5f564d}
+</style>
+</defs>
+<rect width="360" height="640" fill="#fbfaf7"/>
+<rect x="16" y="16" width="328" height="608" rx="14" fill="#fffdf8" stroke="#cfc6ba" stroke-width="2"/>
+<text x="28" y="48" class="title">6-8｜转查谢临舟</text>
+<text x="28" y="72" class="sub">中近景｜小幅横移从顾灵薇带到管家｜7秒</text>
+<rect x="28" y="92" width="304" height="462" rx="8" fill="#2f2b28" stroke="#252525" stroke-width="3"/><rect x="74" y="146" width="212" height="62" rx="4" fill="#6d5038" stroke="#1f1f1f" stroke-width="3"/><path d="M58 116 H302 M64 504 H296" stroke="#9a7a54" stroke-width="3" opacity=".65"/><circle cx="260" cy="158" r="12" fill="#d9a24e" opacity=".8"/><g opacity="0.42"><circle cx="260" cy="260" r="14.4" fill="#f3dfc8" stroke="#252525" stroke-width="2"/><path d="M243.2,274.4 L276.8,274.4 L282.8,333.6 L237.2,333.6 Z" fill="#6d5b4a" stroke="#252525" stroke-width="2"/><line x1="245.9" y1="293.6" x2="229.8" y2="320.8" stroke="#252525" stroke-width="2"/><line x1="274.1" y1="293.6" x2="290.2" y2="320.8" stroke="#252525" stroke-width="2"/><text x="260" y="322.4" text-anchor="middle" class="label">顾仲山</text></g><g opacity="0.42"><circle cx="92" cy="380" r="14.4" fill="#f3dfc8" stroke="#252525" stroke-width="2"/><path d="M75.2,394.4 L108.8,394.4 L114.8,453.6 L69.2,453.6 Z" fill="#c9a24a" stroke="#252525" stroke-width="2"/><line x1="77.9" y1="413.6" x2="61.8" y2="440.8" stroke="#252525" stroke-width="2"/><line x1="106.1" y1="413.6" x2="122.2" y2="440.8" stroke="#252525" stroke-width="2"/><text x="92" y="442.4" text-anchor="middle" class="label">顾灵薇</text></g><g opacity="1"><circle cx="190" cy="360" r="18.0" fill="#f3dfc8" stroke="#252525" stroke-width="2"/><path d="M169.0,378.0 L211.0,378.0 L218.6,452.0 L161.4,452.0 Z" fill="#7b7468" stroke="#252525" stroke-width="2"/><line x1="172.4" y1="402.0" x2="152.2" y2="436.0" stroke="#252525" stroke-width="2"/><line x1="207.6" y1="402.0" x2="227.8" y2="436.0" stroke="#252525" stroke-width="2"/><text x="190" y="438.0" text-anchor="middle" class="label">顾管家</text></g>
+</svg>

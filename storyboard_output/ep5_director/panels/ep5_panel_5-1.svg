@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 640" role="img" aria-label="5-1 回廊相遇">
+<defs>
+<marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#586a83"/></marker>
+<marker id="arrow-red" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#a75858"/></marker>
+<style>
+.title{font:700 20px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#1f1f1f}
+.sub{font:600 13px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#5f564d}
+.label{font:700 13px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#222}
+.note{font:700 18px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#1f1f1f}
+.tiny{font:600 12px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#5f564d}
+</style>
+</defs>
+<rect width="360" height="640" fill="#fbfaf7"/>
+<rect x="16" y="16" width="328" height="608" rx="14" fill="#fffdf8" stroke="#cfc6ba" stroke-width="2"/>
+<text x="28" y="48" class="title">5-1｜回廊相遇</text>
+<text x="28" y="72" class="sub">全景｜稳定器缓慢跟随苏明舒进入回廊｜6秒</text>
+<rect x="28" y="92" width="304" height="462" rx="8" fill="#f0ece2" stroke="#252525" stroke-width="3"/><path d="M58 154 H302 M66 218 H294 M74 282 H286" stroke="#b9b0a4" stroke-width="2" opacity=".85"/><path d="M68 100 L34 554 M292 100 L326 554" stroke="#8a7d70" stroke-width="4"/><path d="M82 112 V528 M280 112 V528" stroke="#9b8f82" stroke-width="8" opacity=".65"/><path d="M40 500 C120 444, 236 444, 320 500" fill="none" stroke="#bbb2a7" stroke-width="3"/><g opacity="1"><circle cx="115" cy="390" r="18.0" fill="#f3dfc8" stroke="#252525" stroke-width="2"/><path d="M94.0,408.0 L136.0,408.0 L143.6,482.0 L86.4,482.0 Z" fill="#d89b65" stroke="#252525" stroke-width="2"/><line x1="97.4" y1="432.0" x2="77.2" y2="466.0" stroke="#252525" stroke-width="2"/><line x1="132.6" y1="432.0" x2="152.8" y2="466.0" stroke="#252525" stroke-width="2"/><text x="115" y="468.0" text-anchor="middle" class="label">苏明舒</text></g><g opacity="1"><circle cx="238" cy="300" r="18.0" fill="#f3dfc8" stroke="#252525" stroke-width="2"/><path d="M217.0,318.0 L259.0,318.0 L266.6,392.0 L209.4,392.0 Z" fill="#586a83" stroke="#252525" stroke-width="2"/><line x1="220.4" y1="342.0" x2="200.2" y2="376.0" stroke="#252525" stroke-width="2"/><line x1="255.6" y1="342.0" x2="275.8" y2="376.0" stroke="#252525" stroke-width="2"/><text x="238" y="378.0" text-anchor="middle" class="label">谢临舟</text></g><g opacity="0.38"><circle cx="76" cy="452" r="14.8" fill="#f3dfc8" stroke="#252525" stroke-width="2"/><path d="M58.8,466.8 L93.2,466.8 L99.4,527.4 L52.6,527.4 Z" fill="#78a06f" stroke="#252525" stroke-width="2"/><line x1="61.5" y1="486.4" x2="45.0" y2="514.3" stroke="#252525" stroke-width="2"/><line x1="90.5" y1="486.4" x2="107.0" y2="514.3" stroke="#252525" stroke-width="2"/><text x="76" y="516.0" text-anchor="middle" class="label">青枝</text></g><g opacity="0.38"><circle cx="286" cy="324" r="14.8" fill="#f3dfc8" stroke="#252525" stroke-width="2"/><path d="M268.8,338.8 L303.2,338.8 L309.4,399.4 L262.6,399.4 Z" fill="#8b7a68" stroke="#252525" stroke-width="2"/><line x1="271.5" y1="358.4" x2="255.0" y2="386.3" stroke="#252525" stroke-width="2"/><line x1="300.5" y1="358.4" x2="317.0" y2="386.3" stroke="#252525" stroke-width="2"/><text x="286" y="388.0" text-anchor="middle" class="label">石墩</text></g>
+</svg>

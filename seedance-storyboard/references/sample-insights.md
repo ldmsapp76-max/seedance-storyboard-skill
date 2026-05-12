@@ -1,59 +1,59 @@
-# Sample Insights
+# 样例经验
 
-These notes summarize prior user examples and prompts. Use them as calibration, not as a rigid template.
+这些笔记总结了用户历史示例和提示词。它们用于校准，不是必须照抄的模板。
 
-## What To Keep
+## 应保留的做法
 
-- Put a global spatial anchor before each Seedance segment: location, time, lighting, sound, character positions, posture, distance, and prop state.
-- Treat continuity as the main production constraint: previous shot result becomes the next shot start.
-- Track important props with owner, hand, body position, opening/front/blade/text direction, and state.
-- Write key actions as causal chains: source, direction, process, result.
-- Give character movement a route: origin, destination, who they pass, final side, and approximate distance.
-- Keep camera language concrete: shot size, angle, focal length, aperture, depth of field, movement, light, performance detail, and prop texture.
-- Use `@角色名` and `@重要道具` labels when a prompt contains several people or props.
-- Reset each Seedance segment timeline to `00:00`.
+- 每个 Seedance 视频段前放置全局空间锚点：地点、时间、光线、声音、人物位置、姿态、距离和道具状态。
+- 把连续性当作主要生产约束：上一镜头的结果就是下一镜头的起点。
+- 重要道具要追踪归属、手别、身体位置、开口/正面/锋刃/文字方向和状态。
+- 关键动作写成因果链：来源、方向、过程、结果。
+- 人物移动要有路线：起点、终点、经过谁、最终停在哪一侧、大约距离。
+- 摄影语言要具体：景别、角度、焦距、光圈、景深、运镜、光线、表演细节、道具质感。
+- 当提示词中包含多个人物或道具时，使用 `@角色名` 和 `@重要道具` 标签。
+- 每个 Seedance 视频段的时间轴都从 `00:00` 重新开始。
 
-## What To Improve
+## 应改进的做法
 
-- Do not copy the old prompt's bulk. The repeated camera/face/audio boilerplate made outputs heavy and harder to inspect.
-- When sample spreadsheets include a `BGM` column, treat it as legacy reference only. Do not carry BGM into Seedance director storyboards or prompts unless the user explicitly asks for music. The default audio policy is: no background music, only character voice, environment sound, and action sound effects.
-- If a user asks for a director storyboard web page, do not expose legacy BGM notes in each shot card. Keep the page aligned with the no-background-music rule.
-- Separate levels clearly: episode beat, Seedance segment, shot, prompt, handoff. Older examples sometimes mix "镜号", "视频", and "分镜".
-- Resolve conflicts consistently. Some older spreadsheet rows include BGM even though the Seedance rule says no background music; for Seedance prompts, keep `无背景音乐` unless the user explicitly changes the rule.
-- Interpret "禁止字幕" as "do not let Seedance add dialogue subtitles or overlay captions." Normal story-world prop text is allowed when it physically exists on an object and matters to the plot, such as a paper note, signboard, letter, phone screen, price plaque, book cover, or document.
-- Do not write sound-effect timing with `@00:14`, `@XS`, or other symbolic tags. Use natural timing phrases such as `镜头开头`, `镜头中段`, `镜头末尾`, or `第X秒`.
-- Use one stable Chinese `避免项` field. Prefer `固定避免项：不要生成对白字幕、标题字、解释字、旁白字卡、水印；对白只作为角色语音出现；已指定的道具文字可以保留。` plus `本段特殊避免项：...`.
-- Do not rely on ornate separators or decorative formatting. Prefer tables or compact production blocks that are easy to validate.
-- Do not over-specify lenses when it distracts from blocking and continuity. Use lens/aperture details when they clarify shot intent.
+- 不要照搬旧提示词的冗长模板。重复的摄影、面部、音频套话会让输出变重，也更难检查。
+- 如果样例表格里有 `BGM` 列，把它当作历史参考。除非用户明确要求音乐，否则不要把 BGM 带入 Seedance 导演分镜或提示词。默认音频规则是：无背景音乐，只保留人物语音、环境音和动作音效。
+- 如果用户要求导演分镜网页，不要在每个镜头卡片里暴露历史 BGM 备注。页面应遵守无背景音乐规则。
+- 层级要分清：单集节拍、Seedance 视频段、镜头、提示词、交接。旧示例有时会混用“镜号”“视频”“分镜”。
+- 遇到冲突时保持一致。有些旧表格包含 BGM，但 Seedance 规则要求无背景音乐；Seedance 提示词默认写 `无背景音乐`，除非用户明确改规则。
+- 将“禁止字幕”理解为“不要让 Seedance 添加对白字幕或说明性叠加文字”。剧情世界中真实存在、且对情节有用的道具文字可以保留，例如纸条、招牌、信件、手机屏幕、价签、书封、文书。
+- 不要用 `@00:14`、`@XS` 或其他符号标注音效时间。使用 `镜头开头`、`镜头中段`、`镜头末尾` 或 `第X秒`。
+- 使用稳定的中文 `避免项` 字段。推荐写法：`固定避免项：不要生成对白字幕、标题字、解释字、旁白字卡、水印；对白只作为角色语音出现；已指定的道具文字可以保留。` 加 `本段特殊避免项：...`。
+- 不依赖华丽分隔线或装饰格式。优先使用便于校验的表格或紧凑生产文本块。
+- 不要在影响走位和连续性检查时过度指定镜头。焦距/光圈细节应服务镜头意图。
 
-## Derived Rhythm Profile
+## 派生节奏画像
 
-Observed examples suggest:
+历史示例显示：
 
-- Seedance segments are usually 10-15 seconds.
-- A 15-second segment commonly contains 3-4 shots; 5 shots only works for very simple reaction/action beats.
-- Individual shots usually run 3-5 seconds.
-- Very short inserts run 1-2.5 seconds.
-- Episode-level storyboard tables average roughly 22-27 shots for 110-141 seconds.
-- Seedance prompt examples are denser: about 28 shots across roughly 100 seconds.
-- Reference AI真人短剧 dialogue scenes often use a 1-2 second establishing shot, then mostly medium close-ups/close-ups, with quick listener reactions and a longer held close-up for the protagonist's verbal reversal.
+- Seedance 视频段通常为 10-15 秒。
+- 一个 15 秒段落常见 3-4 个镜头；5 个镜头只适合非常简单的反应/动作节拍。
+- 单镜通常 3-5 秒。
+- 很短的插入特写通常 1-2.5 秒。
+- 单集分镜表平均约 22-27 个镜头，对应 110-141 秒。
+- Seedance 提示词示例更密，大约 100 秒内 28 个镜头。
+- 参考 AI 真人短剧对白戏通常先用 1-2 秒建立镜头，然后主要使用中近景/近景、快速聆听者反应，并为主角语言反转保留较长近景。
 
-Use this as a default for AI真人短剧:
+AI 真人短剧默认参考：
 
-- Dialogue setup: 3-4 shots per 15 seconds.
-- Pure dialogue confrontation with stable blocking: 4-6 shots per 15 seconds.
-- Physical gag or mechanism reveal: 4-5 shots per 15 seconds, with each action source and result explicit.
-- Emotional pause or hook: 2-3 shots per 15 seconds, slower and more stable.
-- Long scene: split by beat, not by arbitrary duration; each segment should end on a clear handoff or mini-turn.
+- 对白铺垫：每 15 秒 3-4 个镜头。
+- 走位稳定的纯对白交锋：每 15 秒 4-6 个镜头。
+- 身体笑点或机关揭示：每 15 秒 4-5 个镜头，并清楚写出动作来源和结果。
+- 情绪停顿或钩子：每 15 秒 2-3 个镜头，节奏更慢、更稳定。
+- 长场景：按节拍拆分，不按任意时长硬切；每段应结束在清楚的交接或小转折上。
 
-## Preferred Prompt Shape
+## 推荐提示词形状
 
-For each Seedance segment, include:
+每个 Seedance 视频段包含：
 
-1. Segment heading with scene and `视频 X / 共 N 条`.
-2. Global spatial anchor.
-3. Shot timeline starting at `00:00`.
-4. For each shot: shot size/camera, image action, dialogue, sound with natural timing phrases.
-5. Handoff note or next-segment continuity state.
+1. 带场景和 `视频 X / 共 N 条` 的段落标题。
+2. 全局空间锚点。
+3. 从 `00:00` 开始的镜头时间轴。
+4. 每个镜头写：景别/摄影、画面动作、对白、用自然时间短语标注的声音。
+5. 交接说明或下一段连续性状态。
 
-Keep the final prompt readable enough that a human can catch position swaps before generation.
+最终提示词要足够可读，让人能在生成前发现人物站位交换等问题。

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 640" role="img" aria-label="15-1-1">
+<defs>
+<marker id="arrow-red" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#a75858"/></marker>
+<style>
+.title{font:700 19px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#1f1f1f}
+.sub{font:600 13px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#5f564d}
+.label{font:700 13px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#222}
+</style>
+</defs>
+<rect width="360" height="640" fill="#fbfaf7"/>
+<rect x="16" y="16" width="328" height="608" rx="14" fill="#fffdf8" stroke="#cfc6ba" stroke-width="2"/>
+<text x="28" y="48" class="title">15-1-1｜视频1｜00:00-00:05</text>
+<text x="28" y="72" class="sub">特写至中景｜檐下慢拉，衣角闪过，谢清越从阴影出场</text>
+<rect x="28" y="92" width="304" height="462" rx="8" fill="#f0e5d3" stroke="#252525" stroke-width="3"/><path d="M58 154 H302 M66 220 H294 M74 286 H286" stroke="#b9a58a" stroke-width="2" opacity=".85"/><rect x="88" y="390" width="176" height="58" rx="22" fill="#caa76e" stroke="#7b6042" stroke-width="3"/><path d="M68 100 L46 554 M292 100 L314 554" stroke="#8a7d70" stroke-width="4" opacity=".75"/><g opacity="1"><circle cx="210" cy="325" r="18.0" fill="#f3dfc8" stroke="#252525" stroke-width="2"/><path d="M189.0,343.0 L231.0,343.0 L238.6,417.0 L181.4,417.0 Z" fill="#586a83" stroke="#252525" stroke-width="2"/><line x1="192.4" y1="367.0" x2="172.2" y2="401.0" stroke="#252525" stroke-width="2"/><line x1="227.6" y1="367.0" x2="247.8" y2="401.0" stroke="#252525" stroke-width="2"/><text x="210" y="403.0" text-anchor="middle" class="label">谢清越</text></g><g opacity="1"><path d="M214 412 L264 378 M228 410 L264 378 M242 408 L264 378" stroke="#6f5636" stroke-width="4" stroke-linecap="round"/><path d="M214 412 C230 364,258 360,266 378" fill="#d8c49a" opacity=".72" stroke="#6f5636" stroke-width="2"/><text x="238" y="438" text-anchor="middle" class="label">折扇</text></g><path d="M310 170 C260 190, 242 222, 220 260" fill="none" stroke="#a75858" stroke-width="4" stroke-dasharray="10 8" marker-end="url(#arrow-red)"/>
+</svg>

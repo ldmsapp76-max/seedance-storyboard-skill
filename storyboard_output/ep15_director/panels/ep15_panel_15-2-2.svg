@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 640" role="img" aria-label="15-2-2">
+<defs>
+<marker id="arrow-red" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#a75858"/></marker>
+<style>
+.title{font:700 19px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#1f1f1f}
+.sub{font:600 13px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#5f564d}
+.label{font:700 13px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#222}
+</style>
+</defs>
+<rect width="360" height="640" fill="#fbfaf7"/>
+<rect x="16" y="16" width="328" height="608" rx="14" fill="#fffdf8" stroke="#cfc6ba" stroke-width="2"/>
+<text x="28" y="48" class="title">15-2-2｜视频3｜00:05-00:10</text>
+<text x="28" y="72" class="sub">特写｜手持轻晃，闪白回忆</text>
+<rect x="28" y="92" width="304" height="462" rx="8" fill="#5a4e40" stroke="#252525" stroke-width="3"/><path d="M52 460 C120 390,220 390,310 452" fill="#b69254" opacity=".58"/><path d="M56 310 C130 270,230 290,300 320" stroke="#d7b76a" stroke-width="16" opacity=".65"/><circle cx="88" cy="142" r="22" fill="#d9d0b8" opacity=".2"/><g opacity="1"><circle cx="180" cy="326" r="18.0" fill="#f3dfc8" stroke="#252525" stroke-width="2"/><path d="M159.0,344.0 L201.0,344.0 L208.6,418.0 L151.4,418.0 Z" fill="#586a83" stroke="#252525" stroke-width="2"/><line x1="162.4" y1="368.0" x2="142.2" y2="402.0" stroke="#252525" stroke-width="2"/><line x1="197.6" y1="368.0" x2="217.8" y2="402.0" stroke="#252525" stroke-width="2"/><text x="180" y="404.0" text-anchor="middle" class="label">谢清越</text></g><g opacity="1"><path d="M146 418 C174 396,206 432,224 410" fill="none" stroke="#8a7d73" stroke-width="9" stroke-linecap="round"/><circle cx="144" cy="418" r="10" fill="#766b62" stroke="#252525" stroke-width="2"/><text x="180" y="456" text-anchor="middle" class="label">鼠尾道具</text></g>
+</svg>

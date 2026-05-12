@@ -1,66 +1,66 @@
 ---
 name: seedance-storyboard
-description: Convert narrative scripts into production-ready AI真人剧分镜脚本, Seedance 2.0 video segment prompts, and optional storyboard sketch briefs. Use when the user asks to turn a script, screenplay, scene outline, short-drama episode, dialogue draft, or sample script into shot design, storyboard tables, camera plans, character blocking, continuity-safe segment prompts, visual storyboard sketch plans, or Seedance 2.0 generation plans with each video segment capped at 15 seconds.
+description: 将叙事剧本转换成可生产的 AI 真人剧分镜脚本、Seedance 2.0 视频分段提示词，以及可选的分镜草图 brief。适用于用户要求把剧本、场景大纲、短剧单集、对白稿或样例脚本转换成镜头设计、分镜表、摄影方案、人物调度、连续性安全的视频段提示词、视觉分镜草图方案，或每条视频不超过 15 秒的 Seedance 2.0 生成方案。
 ---
 
-# Seedance Storyboard
+# Seedance 分镜
 
-## Core Workflow
+## 核心工作流
 
-Use this skill to turn a script into a complete storyboard package for AI-human drama videos generated with Seedance 2.0.
+使用这个 skill，把剧本转换成适合 Seedance 2.0 生成 AI 真人剧视频的完整分镜包。
 
-1. Read the source script and identify story beats, scene boundaries, speaking turns, emotional reversals, props, locations, and required visual reveals.
-2. Build a continuity bible before designing shots: character identities, wardrobe, props, room geography, screen direction, eye lines, camera axis, and start/end positions.
-3. Design shots for current AI真人剧 pacing: favor clear emotional beats, readable human action, and continuity over flashy coverage.
-4. Group shots into Seedance 2.0 segments. Treat 15 seconds as a hard maximum per segment; prefer 6-12 seconds unless a beat needs more room.
-5. Write continuity handoffs for every segment: first-frame anchor, last-frame anchor, carried props, body position, gaze direction, camera relation, and transition logic.
-6. Produce Seedance-ready prompts only after the shot plan is internally consistent.
-7. When the user asks for storyboard sketches, create sketch briefs after the Seedance prompts are stable. Use the locked shot plan and segment anchors as the source of truth; do not invent new blocking, props, costumes, or camera angles for the sketches.
-   - For Image 2.0 sketch workflows, generate rough visual panels separately, then build readable notes, shot metadata, and character-position diagrams in deterministic HTML/SVG.
-   - For multi-panel generated sketch sheets, slice the sheet into standalone per-shot panel images before placing them in HTML; do not rely on CSS cropping from the full sheet.
-8. Run a content QA pass against the source script before finalizing. Check story fidelity, causal logic, spatial continuity, character behavior, prompt generability, sketch usefulness, and Seedance hallucination risks.
-9. If the storyboard is saved to a Markdown file, run `scripts/validate_storyboard.py <file>` and fix flagged duration or anchor issues.
+1. 阅读源剧本，识别剧情节拍、场景边界、发言轮次、情绪反转、道具、地点，以及必须被观众看见的视觉信息。
+2. 设计镜头前，先建立连续性设定：人物身份、服装、道具、空间地理、画面方向、视线、镜头轴线、起止站位。
+3. 按当前 AI 真人剧节奏设计镜头：优先保证情绪清楚、动作可读、连续性稳定，而不是追求花哨覆盖。
+4. 将镜头组合成 Seedance 2.0 视频段。每段 15 秒是硬上限；除非节拍确实需要，优先使用 6-12 秒。
+5. 为每个视频段写连续性交接：首帧锚点、尾帧锚点、延续道具、身体位置、视线方向、镜头关系和转场逻辑。
+6. 只有在镜头方案内部一致后，才生成 Seedance 可用提示词。
+7. 如果用户要求分镜草图，在 Seedance 提示词稳定后再创建草图 brief。草图必须以锁定后的镜头方案和分段锚点为准；不要新增走位、道具、服装或机位。
+   - 对 Image 2.0 草图流程，先单独生成粗略视觉画面，再用确定性 HTML/SVG 制作可读说明、镜头信息和人物站位图。
+   - 对多格生成草图表，先把整张图切成单独的每镜面板，再放入 HTML；不要依赖 CSS 从整图中裁切。
+8. 定稿前，对照源剧本做内容 QA。检查剧情忠实度、因果逻辑、空间连续性、人物行为、提示词可生成性、草图可用性，以及 Seedance 幻觉风险。
+9. 如果分镜保存为 Markdown 文件，运行 `scripts/validate_storyboard.py <file>`，并修复脚本提示的时长或锚点问题。
 
-## Reference Loading
+## 参考文档加载
 
-Load only the reference needed for the current task:
+只加载当前任务需要的参考文档：
 
-- `references/storyboard-workflow.md`: end-to-end conversion procedure from script to shot list and generation package.
-- `references/seedance-continuity.md`: Seedance 2.0 segmentation rules, 15-second cap, prompt continuity, and cross-segment handoffs.
-- `references/ai-drama-pacing.md`: shot count, shot length, shot-size logic, lens defaults, and rhythm guidance for AI真人短剧.
-- `references/sample-insights.md`: distilled lessons from the user's prior examples and prompts; use as calibration, not as a template to copy.
-- `references/content-qa.md`: content-level validation after generation; use before delivering final storyboard or when the user asks to check quality.
-- `references/output-format.md`: required output tables and field names.
-- `references/storyboard-sketch.md`: optional sketch-brief workflow for turning locked shots or segment anchors into rough storyboard panel prompts.
+- `references/storyboard-workflow.md`：从剧本到镜头表、生成包的端到端转换流程。
+- `references/seedance-continuity.md`：Seedance 2.0 分段规则、15 秒上限、提示词连续性和跨段交接。
+- `references/ai-drama-pacing.md`：AI 真人短剧的镜头数量、镜头时长、景别逻辑、镜头默认值和节奏建议。
+- `references/sample-insights.md`：从用户历史示例和提示词中提炼的经验；用作校准，不要当成固定模板照抄。
+- `references/content-qa.md`：生成后的内容层面检查；最终交付前或用户要求检查质量时使用。
+- `references/output-format.md`：要求的输出表格和字段名。
+- `references/storyboard-sketch.md`：可选草图 brief 工作流，用于把锁定镜头或分段锚点转换成粗略分镜面板提示词。
 
-When the user provides sample scripts or sample storyboards, inspect them first and read `references/sample-insights.md`. Infer a temporary style profile: shot density, average shot duration, dialogue-to-action ratio, camera vocabulary, and segment structure. Apply that profile to the current task while still enforcing the Seedance 2.0 constraints.
+当用户提供样例剧本或样例分镜时，先检查样例，并阅读 `references/sample-insights.md`。推断临时风格画像：镜头密度、平均镜头时长、对白与动作比例、摄影词汇、分段结构。应用该风格时，仍必须遵守 Seedance 2.0 约束。
 
-## Required Decisions
+## 必须先做的决定
 
-Before writing the final storyboard, decide and state any assumptions that affect continuity:
+写最终分镜前，决定并说明会影响连续性的假设：
 
-- Episode format: vertical short drama, horizontal drama, ad, trailer, or other.
-- Aspect ratio and target runtime, if absent.
-- Main characters and stable visual identifiers.
-- Scene geography and screen direction.
-- Whether the output should include only storyboard tables or also final Seedance prompts.
-- Whether storyboard sketches should cover every shot, every Seedance segment first frame, or only key story/reveal/action panels.
+- 单集形式：竖屏短剧、横屏剧、广告、预告片或其他。
+- 画幅和目标时长，如果用户没有提供。
+- 主要人物和稳定视觉识别点。
+- 场景地理和画面方向。
+- 输出是否只包含分镜表，还是也包含最终 Seedance 提示词。
+- 分镜草图覆盖范围：每个镜头、每个 Seedance 段首帧，还是只覆盖关键剧情/揭示/动作面板。
 
-If information is missing, make conservative assumptions and mark them under `Assumptions` instead of blocking.
+如果信息缺失，做保守假设并放到 `Assumptions` 中，不要因此卡住。
 
-## Continuity Rules
+## 连续性规则
 
-Maintain a stable spatial model:
+维护稳定的空间模型：
 
-- Track character placement as screen-left, center, screen-right plus foreground, midground, background.
-- Preserve the 180-degree line unless a motivated transition explicitly resets geography.
-- Carry gaze direction, body orientation, hand props, sitting/standing state, and distance between characters across cuts.
-- Write every segment's first and last frame as if Seedance must reconstruct continuity from text alone.
-- Avoid asking Seedance to perform too many simultaneous changes in one segment; split complex action into adjacent segments.
+- 追踪人物在画面中的 screen-left、center、screen-right，以及 foreground、midground、background。
+- 除非有明确动机重建空间关系，否则保持 180 度轴线。
+- 跨剪辑延续视线方向、身体朝向、手中道具、坐站状态、人物距离。
+- 每个视频段的首帧和尾帧都要写到足够清楚，让 Seedance 只凭文字也能重建连续性。
+- 避免让 Seedance 在同一段中完成太多同步变化；复杂动作拆成相邻视频段。
 
-## Output Contract
+## 输出约定
 
-Unless the user requests another format, return:
+除非用户要求其他格式，默认返回：
 
 1. `Assumptions`
 2. `Continuity Bible`
@@ -70,7 +70,7 @@ Unless the user requests another format, return:
 6. `Content QA`
 7. `Continuity Risk Checks`
 8. `Production Stats`
-9. `Storyboard Sketch Briefs` when sketches are requested
-10. `Repair Notes` when a script beat needs adjustment for generation reliability
+9. 用户要求草图时，加入 `Storyboard Sketch Briefs`
+10. 剧本节拍需要为生成可靠性做调整时，加入 `Repair Notes`
 
-Keep the final output production-oriented. Do not explain basic film terms unless the user asks.
+最终输出要保持生产导向。除非用户询问，不解释基础影视术语。

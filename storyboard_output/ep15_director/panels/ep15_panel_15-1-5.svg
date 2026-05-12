@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 640" role="img" aria-label="15-1-5">
+<defs>
+<marker id="arrow-red" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#a75858"/></marker>
+<style>
+.title{font:700 19px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#1f1f1f}
+.sub{font:600 13px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#5f564d}
+.label{font:700 13px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#222}
+</style>
+</defs>
+<rect width="360" height="640" fill="#fbfaf7"/>
+<rect x="16" y="16" width="328" height="608" rx="14" fill="#fffdf8" stroke="#cfc6ba" stroke-width="2"/>
+<text x="28" y="48" class="title">15-1-5｜视频2｜00:05-00:10</text>
+<text x="28" y="72" class="sub">近景｜固定，折扇敲肩</text>
+<rect x="28" y="92" width="304" height="462" rx="8" fill="#f0e5d3" stroke="#252525" stroke-width="3"/><path d="M58 154 H302 M66 220 H294 M74 286 H286" stroke="#b9a58a" stroke-width="2" opacity=".85"/><rect x="88" y="390" width="176" height="58" rx="22" fill="#caa76e" stroke="#7b6042" stroke-width="3"/><path d="M68 100 L46 554 M292 100 L314 554" stroke="#8a7d70" stroke-width="4" opacity=".75"/><g opacity="1"><circle cx="134" cy="384" r="18.0" fill="#f3dfc8" stroke="#252525" stroke-width="2"/><path d="M113.0,402.0 L155.0,402.0 L162.6,476.0 L105.4,476.0 Z" fill="#d89b65" stroke="#252525" stroke-width="2"/><line x1="116.4" y1="426.0" x2="96.2" y2="460.0" stroke="#252525" stroke-width="2"/><line x1="151.6" y1="426.0" x2="171.8" y2="460.0" stroke="#252525" stroke-width="2"/><text x="134" y="462.0" text-anchor="middle" class="label">林晚</text></g><g opacity="1"><circle cx="218" cy="330" r="18.0" fill="#f3dfc8" stroke="#252525" stroke-width="2"/><path d="M197.0,348.0 L239.0,348.0 L246.6,422.0 L189.4,422.0 Z" fill="#586a83" stroke="#252525" stroke-width="2"/><line x1="200.4" y1="372.0" x2="180.2" y2="406.0" stroke="#252525" stroke-width="2"/><line x1="235.6" y1="372.0" x2="255.8" y2="406.0" stroke="#252525" stroke-width="2"/><text x="218" y="408.0" text-anchor="middle" class="label">谢清越</text></g><g opacity="1"><path d="M174 408 L224 374 M188 406 L224 374 M202 404 L224 374" stroke="#6f5636" stroke-width="4" stroke-linecap="round"/><path d="M174 408 C190 360,218 356,226 374" fill="#d8c49a" opacity=".72" stroke="#6f5636" stroke-width="2"/><text x="198" y="434" text-anchor="middle" class="label">折扇</text></g><g opacity="1"><ellipse cx="104" cy="462" rx="42" ry="18" fill="#caa76e" stroke="#5f4b2b" stroke-width="2"/><path d="M84 458 C100 440,112 478,128 456" fill="none" stroke="#9bb26c" stroke-width="4"/><text x="104" y="504" text-anchor="middle" class="label">药材</text></g>
+</svg>

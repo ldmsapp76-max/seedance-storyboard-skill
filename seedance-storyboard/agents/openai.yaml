@@ -1,4 +1,4 @@
 interface:
-  display_name: "Seedance Storyboard"
-  short_description: "Script to Seedance storyboard and sketch plans"
-  default_prompt: "Use $seedance-storyboard to convert this script into a continuity-safe storyboard, Seedance 2.0 segment plan, and optional storyboard sketch briefs."
+  display_name: "Seedance 分镜"
+  short_description: "将剧本转换成 Seedance 分镜、视频分段和草图方案"
+  default_prompt: "使用 $seedance-storyboard 将这份剧本转换成连续性安全的导演分镜、Seedance 2.0 视频分段方案，以及可选的分镜草图 brief。"

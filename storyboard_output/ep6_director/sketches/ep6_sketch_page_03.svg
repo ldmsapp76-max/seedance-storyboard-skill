@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" role="img">
+<defs>
+<marker id="arr" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#356d9b"/></marker>
+<style>
+.page-title{font:800 26px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#1f1f1f}
+.page-label{font:800 21px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#8a6538}
+.page-text{font:600 20px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#2b2b2b}
+.svg-name{font:700 14px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#222}
+.svg-muted{font:700 13px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#6d655d}
+.svg-cam{font:900 15px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#356d9b}
+</style>
+</defs>
+<rect width="1080" height="1920" fill="#f3eee6"/>
+<text x="54" y="54" class="page-title">第6集导演草图页 3 / 6</text>
+<g transform="translate(54,94)">
+<rect x="0" y="0" width="960" height="386" rx="10" fill="#fffdf8" stroke="#cfc6ba" stroke-width="2"/>
+<text x="26" y="42" class="page-title">6-9｜太干净有鬼｜5秒</text>
+<image href="../panels/ep6_panel_6-9.svg" x="26" y="62" width="170" height="302"/>
+<g transform="translate(228,54) scale(0.72)"><defs><marker id="arr" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#356d9b"/></marker></defs><rect x="12" y="12" width="336" height="316" rx="10" fill="#fbfaf7" stroke="#cfc6ba"/><rect x="46" y="42" width="268" height="66" rx="8" fill="#ede6dc" stroke="#d7c9bb"/><text x="180" y="80" text-anchor="middle" class="svg-muted">顾相府书房 / 主轴线</text><path d="M 202 304 L 116 74 L 244 74 Z" fill="#7aa0c4" opacity=".16" stroke="#356d9b" stroke-width="2"/><line x1="202" y1="304" x2="180" y2="116" stroke="#356d9b" stroke-width="4" marker-end="url(#arr)"/><polygon points="184,318 220,318 202,282" fill="#356d9b"/><text x="202" y="342" text-anchor="middle" class="svg-cam">CAM</text><text x="320" y="318" text-anchor="end" class="svg-muted">书案正面 / FOV</text><circle cx="180" cy="112" r="22" fill="#6d5b4a" stroke="#252525" stroke-width="2"/><text x="180" y="154" text-anchor="middle" class="svg-name">顾仲山</text><circle cx="108" cy="214" r="22" fill="#c9a24a" stroke="#252525" stroke-width="2"/><text x="108" y="256" text-anchor="middle" class="svg-name">顾灵薇</text><circle cx="268" cy="172" r="22" fill="#7b7468" stroke="#252525" stroke-width="2"/><text x="268" y="214" text-anchor="middle" class="svg-name">顾管家</text></g>
+<text x="520" y="92" class="page-label">导演备注</text>
+<text x="520" y="126" class="page-text">特写 / 顾仲山手指敲击书案特写</text>
+<text x="520" y="158" class="page-text">微距推近手指敲桌</text>
+<text x="520" y="198" class="page-label">画面动作</text>
+<text x="520" y="232" class="page-text">顾仲山手指轻敲桌面，一下、两下，顾仲山：太干净，</text><text x="520" y="262" class="page-text">便有鬼。查他。</text>
+</g><g transform="translate(54,552)">
+<rect x="0" y="0" width="960" height="386" rx="10" fill="#fffdf8" stroke="#cfc6ba" stroke-width="2"/>
+<text x="26" y="42" class="page-title">6-10｜书房收束｜4秒</text>
+<image href="../panels/ep6_panel_6-10.svg" x="26" y="62" width="170" height="302"/>
+<g transform="translate(228,54) scale(0.72)"><defs><marker id="arr" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#356d9b"/></marker></defs><rect x="12" y="12" width="336" height="316" rx="10" fill="#fbfaf7" stroke="#cfc6ba"/><rect x="46" y="42" width="268" height="66" rx="8" fill="#ede6dc" stroke="#d7c9bb"/><text x="180" y="80" text-anchor="middle" class="svg-muted">顾相府书房 / 主轴线</text><path d="M 180 312 L 116 106 L 244 106 Z" fill="#7aa0c4" opacity=".16" stroke="#356d9b" stroke-width="2"/><line x1="180" y1="312" x2="180" y2="148" stroke="#356d9b" stroke-width="4" marker-end="url(#arr)"/><polygon points="162,326 198,326 180,290" fill="#356d9b"/><text x="180" y="350" text-anchor="middle" class="svg-cam">CAM</text><text x="320" y="318" text-anchor="end" class="svg-muted">书房轴线 / FOV</text><circle cx="180" cy="112" r="22" fill="#6d5b4a" stroke="#252525" stroke-width="2"/><text x="180" y="154" text-anchor="middle" class="svg-name">顾仲山</text><circle cx="108" cy="214" r="22" fill="#c9a24a" stroke="#252525" stroke-width="2"/><text x="108" y="256" text-anchor="middle" class="svg-name">顾灵薇</text><circle cx="196" cy="195" r="22" fill="#7b7468" stroke="#252525" stroke-width="2"/><text x="196" y="237" text-anchor="middle" class="svg-name">顾管家</text></g>
+<text x="520" y="92" class="page-label">导演备注</text>
+<text x="520" y="126" class="page-text">中景 / 书房侧后方，管家低头领命，顾仲山稳坐书案后</text>
+<text x="520" y="158" class="page-text">稳定器缓慢后拉</text>
+<text x="520" y="198" class="page-label">画面动作</text>
+<text x="520" y="232" class="page-text">管家垂首应下，书房里的烛火晃了一下，顾灵薇脸上的</text><text x="520" y="262" class="page-text">金粉在暗处显得更刺眼。</text>
+</g><g transform="translate(54,1010)">
+<rect x="0" y="0" width="960" height="386" rx="10" fill="#fffdf8" stroke="#cfc6ba" stroke-width="2"/>
+<text x="26" y="42" class="page-title">6-11｜苏府喝茶｜5秒</text>
+<image href="../panels/ep6_panel_6-11.svg" x="26" y="62" width="170" height="302"/>
+<g transform="translate(228,54) scale(0.72)"><defs><marker id="arr" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#356d9b"/></marker></defs><rect x="12" y="12" width="336" height="316" rx="10" fill="#fbfaf7" stroke="#cfc6ba"/><rect x="46" y="42" width="268" height="66" rx="8" fill="#f1e8dc" stroke="#d7c9bb"/><text x="180" y="80" text-anchor="middle" class="svg-muted">苏府正厅 / 主轴线</text><path d="M 180 312 L 106 136 L 234 136 Z" fill="#7aa0c4" opacity=".16" stroke="#356d9b" stroke-width="2"/><line x1="180" y1="312" x2="170" y2="178" stroke="#356d9b" stroke-width="4" marker-end="url(#arr)"/><polygon points="162,326 198,326 180,290" fill="#356d9b"/><text x="180" y="350" text-anchor="middle" class="svg-cam">CAM</text><text x="320" y="318" text-anchor="end" class="svg-muted">正厅轴线 / FOV</text><circle cx="150" cy="176" r="22" fill="#d89b65" stroke="#252525" stroke-width="2"/><text x="150" y="218" text-anchor="middle" class="svg-name">苏明舒</text><circle cx="235" cy="210" r="22" fill="#78a06f" stroke="#252525" stroke-width="2"/><text x="235" y="252" text-anchor="middle" class="svg-name">青枝</text></g>
+<text x="520" y="92" class="page-label">导演备注</text>
+<text x="520" y="126" class="page-text">全景 / 苏府正厅正面，苏明舒坐在桌旁，青枝站在侧边</text>
+<text x="520" y="158" class="page-text">稳定器缓慢推进</text>
+<text x="520" y="198" class="page-label">画面动作</text>
+<text x="520" y="232" class="page-text">苏明舒回到苏府正厅，坐在桌旁慢慢喝茶，青枝站在一</text><text x="520" y="262" class="page-text">旁，小心翼翼看着她。</text>
+</g><g transform="translate(54,1468)">
+<rect x="0" y="0" width="960" height="386" rx="10" fill="#fffdf8" stroke="#cfc6ba" stroke-width="2"/>
+<text x="26" y="42" class="page-title">6-12｜青枝八卦｜5秒</text>
+<image href="../panels/ep6_panel_6-12.svg" x="26" y="62" width="170" height="302"/>
+<g transform="translate(228,54) scale(0.72)"><defs><marker id="arr" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#356d9b"/></marker></defs><rect x="12" y="12" width="336" height="316" rx="10" fill="#fbfaf7" stroke="#cfc6ba"/><rect x="46" y="42" width="268" height="66" rx="8" fill="#f1e8dc" stroke="#d7c9bb"/><text x="180" y="80" text-anchor="middle" class="svg-muted">苏府正厅 / 主轴线</text><path d="M 245 304 L 156 168 L 284 168 Z" fill="#7aa0c4" opacity=".16" stroke="#356d9b" stroke-width="2"/><line x1="245" y1="304" x2="220" y2="210" stroke="#356d9b" stroke-width="4" marker-end="url(#arr)"/><polygon points="227,318 263,318 245,282" fill="#356d9b"/><text x="245" y="342" text-anchor="middle" class="svg-cam">CAM</text><text x="320" y="318" text-anchor="end" class="svg-muted">青枝侧 / FOV</text><circle cx="150" cy="176" r="22" fill="#d89b65" stroke="#252525" stroke-width="2"/><text x="150" y="218" text-anchor="middle" class="svg-name">苏明舒</text><circle cx="235" cy="210" r="22" fill="#78a06f" stroke="#252525" stroke-width="2"/><text x="235" y="252" text-anchor="middle" class="svg-name">青枝</text></g>
+<text x="520" y="92" class="page-label">导演备注</text>
+<text x="520" y="126" class="page-text">中近景 / 青枝侧前方，苏明舒在桌旁</text>
+<text x="520" y="158" class="page-text">轻微推近青枝试探表情</text>
+<text x="520" y="198" class="page-label">画面动作</text>
+<text x="520" y="232" class="page-text">青枝小心翼翼开口，青枝：小姐，您还在想谢大人？苏</text><text x="520" y="262" class="page-text">明舒正喝茶，动作顿了一下。</text>
+</g>
+</svg>

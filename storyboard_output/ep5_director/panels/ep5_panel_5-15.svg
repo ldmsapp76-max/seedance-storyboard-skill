@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 640" role="img" aria-label="5-15 风挑人吹">
+<defs>
+<marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#586a83"/></marker>
+<marker id="arrow-red" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#a75858"/></marker>
+<style>
+.title{font:700 20px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#1f1f1f}
+.sub{font:600 13px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#5f564d}
+.label{font:700 13px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#222}
+.note{font:700 18px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#1f1f1f}
+.tiny{font:600 12px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#5f564d}
+</style>
+</defs>
+<rect width="360" height="640" fill="#fbfaf7"/>
+<rect x="16" y="16" width="328" height="608" rx="14" fill="#fffdf8" stroke="#cfc6ba" stroke-width="2"/>
+<text x="28" y="48" class="title">5-15｜风挑人吹</text>
+<text x="28" y="72" class="sub">近景｜固定镜头，靠台词节奏完成暧昧笑点｜7秒</text>
+<rect x="28" y="92" width="304" height="462" rx="8" fill="#f0ece2" stroke="#252525" stroke-width="3"/><path d="M58 154 H302 M66 218 H294 M74 282 H286" stroke="#b9b0a4" stroke-width="2" opacity=".85"/><path d="M68 100 L34 554 M292 100 L326 554" stroke="#8a7d70" stroke-width="4"/><path d="M82 112 V528 M280 112 V528" stroke="#9b8f82" stroke-width="8" opacity=".65"/><path d="M40 500 C120 444, 236 444, 320 500" fill="none" stroke="#bbb2a7" stroke-width="3"/><g opacity="1"><circle cx="145" cy="365" r="18.0" fill="#f3dfc8" stroke="#252525" stroke-width="2"/><path d="M124.0,383.0 L166.0,383.0 L173.6,457.0 L116.4,457.0 Z" fill="#d89b65" stroke="#252525" stroke-width="2"/><line x1="127.4" y1="407.0" x2="107.2" y2="441.0" stroke="#252525" stroke-width="2"/><line x1="162.6" y1="407.0" x2="182.8" y2="441.0" stroke="#252525" stroke-width="2"/><text x="145" y="443.0" text-anchor="middle" class="label">苏明舒</text></g><g opacity="1"><circle cx="205" cy="330" r="18.0" fill="#f3dfc8" stroke="#252525" stroke-width="2"/><path d="M184.0,348.0 L226.0,348.0 L233.6,422.0 L176.4,422.0 Z" fill="#586a83" stroke="#252525" stroke-width="2"/><line x1="187.4" y1="372.0" x2="167.2" y2="406.0" stroke="#252525" stroke-width="2"/><line x1="222.6" y1="372.0" x2="242.8" y2="406.0" stroke="#252525" stroke-width="2"/><text x="205" y="408.0" text-anchor="middle" class="label">谢临舟</text></g><g opacity="0.38"><circle cx="82" cy="430" r="14.8" fill="#f3dfc8" stroke="#252525" stroke-width="2"/><path d="M64.8,444.8 L99.2,444.8 L105.4,505.4 L58.6,505.4 Z" fill="#78a06f" stroke="#252525" stroke-width="2"/><line x1="67.5" y1="464.4" x2="51.0" y2="492.3" stroke="#252525" stroke-width="2"/><line x1="96.5" y1="464.4" x2="113.0" y2="492.3" stroke="#252525" stroke-width="2"/><text x="82" y="494.0" text-anchor="middle" class="label">青枝</text></g><g opacity="0.38"><circle cx="278" cy="392" r="14.8" fill="#f3dfc8" stroke="#252525" stroke-width="2"/><path d="M260.8,406.8 L295.2,406.8 L301.4,467.4 L254.6,467.4 Z" fill="#8b7a68" stroke="#252525" stroke-width="2"/><line x1="263.5" y1="426.4" x2="247.0" y2="454.3" stroke="#252525" stroke-width="2"/><line x1="292.5" y1="426.4" x2="309.0" y2="454.3" stroke="#252525" stroke-width="2"/><text x="278" y="456.0" text-anchor="middle" class="label">石墩</text></g><path d="M204 322 C184 338, 166 344, 150 356" fill="none" stroke="#a75858" stroke-width="4" stroke-dasharray="10 8" marker-end="url(#arrow-red)"/>
+</svg>

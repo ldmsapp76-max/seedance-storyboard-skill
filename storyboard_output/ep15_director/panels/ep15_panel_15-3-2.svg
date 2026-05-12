@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 640" role="img" aria-label="15-3-2">
+<defs>
+<marker id="arrow-red" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#a75858"/></marker>
+<style>
+.title{font:700 19px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#1f1f1f}
+.sub{font:600 13px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#5f564d}
+.label{font:700 13px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#222}
+</style>
+</defs>
+<rect width="360" height="640" fill="#fbfaf7"/>
+<rect x="16" y="16" width="328" height="608" rx="14" fill="#fffdf8" stroke="#cfc6ba" stroke-width="2"/>
+<text x="28" y="48" class="title">15-3-2｜视频5｜00:05-00:10</text>
+<text x="28" y="72" class="sub">近景｜慢推林晚下令</text>
+<rect x="28" y="92" width="304" height="462" rx="8" fill="#322924" stroke="#252525" stroke-width="3"/><rect x="72" y="390" width="210" height="62" rx="22" fill="#8c6744" stroke="#4d3424" stroke-width="3"/><path d="M60 126 H300 M76 172 H284" stroke="#7c6250" stroke-width="3"/><circle cx="178" cy="438" r="36" fill="#d9a24e" opacity=".18"/><g opacity="1"><circle cx="135" cy="365" r="18.0" fill="#f3dfc8" stroke="#252525" stroke-width="2"/><path d="M114.0,383.0 L156.0,383.0 L163.6,457.0 L106.4,457.0 Z" fill="#d89b65" stroke="#252525" stroke-width="2"/><line x1="117.4" y1="407.0" x2="97.2" y2="441.0" stroke="#252525" stroke-width="2"/><line x1="152.6" y1="407.0" x2="172.8" y2="441.0" stroke="#252525" stroke-width="2"/><text x="135" y="443.0" text-anchor="middle" class="label">林晚</text></g><g opacity="1"><circle cx="238" cy="336" r="18.0" fill="#f3dfc8" stroke="#252525" stroke-width="2"/><path d="M217.0,354.0 L259.0,354.0 L266.6,428.0 L209.4,428.0 Z" fill="#78a06f" stroke="#252525" stroke-width="2"/><line x1="220.4" y1="378.0" x2="200.2" y2="412.0" stroke="#252525" stroke-width="2"/><line x1="255.6" y1="378.0" x2="275.8" y2="412.0" stroke="#252525" stroke-width="2"/><text x="238" y="414.0" text-anchor="middle" class="label">阿云</text></g><g opacity="1"><rect x="166" y="423" width="20" height="60" rx="4" fill="#f1dfbd" stroke="#7a6040" stroke-width="2"/><path d="M176 405 C158 425,194 425,176 405" fill="#e3a847" stroke="#a25a2e" stroke-width="2"/><text x="176" y="509" text-anchor="middle" class="label">蜡烛</text></g>
+</svg>

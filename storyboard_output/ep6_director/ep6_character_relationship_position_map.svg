@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 980" role="img">
+<defs>
+<marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#3b5f84"/></marker>
+<style>
+.title{font:900 42px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#1f1f1f}
+.card-title{font:800 26px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#1f1f1f}
+.text{font:600 20px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#3a332d}
+.label{font:800 18px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#fff}
+.small{font:700 17px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#5f564d}
+.phase{font:800 22px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#8a6538}
+</style>
+</defs>
+<rect width="1600" height="980" fill="#fbfaf7"/>
+<text x="64" y="70" class="title">第6集人物关系位置图｜顾府权谋与谢临舟突然求娶</text>
+<rect x="58" y="112" width="690" height="760" rx="16" fill="#fffdf8" stroke="#d1c7ba" stroke-width="2"/>
+<text x="100" y="166" class="card-title">关系线</text>
+<circle cx="220" cy="285" r="66" fill="#6d5b4a" stroke="#252525" stroke-width="3"/><text x="220" y="294" text-anchor="middle" class="label">顾仲山</text>
+<circle cx="500" cy="285" r="66" fill="#c9a24a" stroke="#252525" stroke-width="3"/><text x="500" y="294" text-anchor="middle" class="label">顾灵薇</text>
+<circle cx="358" cy="430" r="48" fill="#7b7468" stroke="#252525" stroke-width="3"/><text x="358" y="438" text-anchor="middle" class="label">管家</text>
+<circle cx="220" cy="635" r="66" fill="#d89b65" stroke="#252525" stroke-width="3"/><text x="220" y="644" text-anchor="middle" class="label">苏明舒</text>
+<circle cx="500" cy="635" r="66" fill="#586a83" stroke="#252525" stroke-width="3"/><text x="500" y="644" text-anchor="middle" class="label">谢临舟</text>
+<rect x="435" y="505" width="92" height="50" rx="8" fill="#d9c79a" stroke="#252525" stroke-width="3"/><text x="481" y="537" text-anchor="middle" class="small">礼单</text>
+<path d="M286 285 C352 245, 420 245, 434 285" fill="none" stroke="#3b5f84" stroke-width="5" marker-end="url(#arrow)"/>
+<text x="360" y="230" text-anchor="middle" class="text">父女同谋：凤命名声</text>
+<path d="M337 398 C288 362, 250 334, 230 350" fill="none" stroke="#6b5a4a" stroke-width="5" marker-end="url(#arrow)"/>
+<text x="104" y="438" class="text">调查谢临舟</text>
+<path d="M500 569 C486 546, 486 533, 481 505" fill="none" stroke="#3b5f84" stroke-width="5" marker-end="url(#arrow)"/>
+<text x="536" y="520" class="text">带礼求娶</text>
+<path d="M434 635 C360 594, 292 594, 286 635" fill="none" stroke="#a75858" stroke-width="5" stroke-dasharray="12 8" marker-end="url(#arrow)"/>
+<text x="360" y="590" text-anchor="middle" class="text">震惊 / 被打乱节奏</text>
+<rect x="808" y="112" width="732" height="760" rx="16" fill="#fffdf8" stroke="#d1c7ba" stroke-width="2"/>
+<text x="850" y="166" class="card-title">三段空间调度</text>
+<g transform="translate(850,210)">
+<text x="0" y="0" class="phase">1. 6-1 至 6-10：顾相府书房</text>
+<rect x="0" y="24" width="590" height="152" rx="10" fill="#eee7dc" stroke="#d1c7ba"/>
+<circle cx="290" cy="78" r="28" fill="#6d5b4a"/><text x="286" y="85" class="label">顾</text>
+<circle cx="155" cy="126" r="26" fill="#c9a24a"/><text x="151" y="133" class="label">薇</text>
+<circle cx="430" cy="116" r="24" fill="#7b7468"/><text x="426" y="123" class="label">管</text>
+<path d="M288 176 L288 90" stroke="#3b5f84" stroke-width="4" marker-end="url(#arrow)"/><text x="306" y="170" class="small">CAM</text>
+<text x="24" y="202" class="text">书案居中，顾仲山坐镇；顾灵薇侧位受训，管家低声汇报。</text>
+</g>
+<g transform="translate(850,455)">
+<text x="0" y="0" class="phase">2. 6-11 至 6-18：苏府正厅轻喜剧</text>
+<rect x="0" y="24" width="590" height="152" rx="10" fill="#f0e7da" stroke="#d1c7ba"/>
+<circle cx="250" cy="96" r="28" fill="#d89b65"/><text x="246" y="103" class="label">苏</text>
+<circle cx="352" cy="120" r="24" fill="#78a06f"/><text x="348" y="127" class="label">青</text>
+<circle cx="104" cy="78" r="24" fill="#9a7a57"/><text x="100" y="85" class="label">管</text>
+<path d="M104 78 C142 86, 184 96, 232 100" stroke="#a75858" stroke-width="4" stroke-dasharray="9 7" marker-end="url(#arrow)"/>
+<text x="24" y="202" class="text">苏明舒侧位喝茶；门口急报打断，视线转向厅门。</text>
+</g>
+<g transform="translate(850,700)">
+<text x="0" y="0" class="phase">3. 6-19 至 6-24：谢临舟登门求娶</text>
+<rect x="0" y="24" width="590" height="152" rx="10" fill="#efe8dd" stroke="#d1c7ba"/>
+<circle cx="292" cy="70" r="28" fill="#586a83"/><text x="288" y="77" class="label">谢</text>
+<circle cx="390" cy="88" r="22" fill="#8b7a68"/><text x="386" y="95" class="label">石</text>
+<rect x="406" y="116" width="46" height="32" rx="4" fill="#d9c79a" stroke="#252525" stroke-width="2"/>
+<circle cx="132" cy="114" r="26" fill="#8b6d50"/><text x="128" y="121" class="label">父</text>
+<circle cx="230" cy="136" r="26" fill="#d89b65"/><text x="226" y="143" class="label">苏</text>
+<path d="M292 70 C278 100, 254 122, 230 136" stroke="#3b5f84" stroke-width="4" marker-end="url(#arrow)"/>
+<text x="24" y="202" class="text">谢临舟站厅中央行礼，礼单在石墩手中；苏府众人集体石化。</text>
+</g>
+</svg>

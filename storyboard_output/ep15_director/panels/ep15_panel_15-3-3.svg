@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 640" role="img" aria-label="15-3-3">
+<defs>
+<marker id="arrow-red" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#a75858"/></marker>
+<style>
+.title{font:700 19px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#1f1f1f}
+.sub{font:600 13px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#5f564d}
+.label{font:700 13px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#222}
+</style>
+</defs>
+<rect width="360" height="640" fill="#fbfaf7"/>
+<rect x="16" y="16" width="328" height="608" rx="14" fill="#fffdf8" stroke="#cfc6ba" stroke-width="2"/>
+<text x="28" y="48" class="title">15-3-3｜视频5｜00:10-00:15</text>
+<text x="28" y="72" class="sub">特写｜固定，吹灭蜡烛</text>
+<rect x="28" y="92" width="304" height="462" rx="8" fill="#322924" stroke="#252525" stroke-width="3"/><rect x="72" y="390" width="210" height="62" rx="22" fill="#8c6744" stroke="#4d3424" stroke-width="3"/><path d="M60 126 H300 M76 172 H284" stroke="#7c6250" stroke-width="3"/><circle cx="178" cy="438" r="36" fill="#d9a24e" opacity=".18"/><g opacity="1"><circle cx="178" cy="330" r="18.0" fill="#f3dfc8" stroke="#252525" stroke-width="2"/><path d="M157.0,348.0 L199.0,348.0 L206.6,422.0 L149.4,422.0 Z" fill="#d89b65" stroke="#252525" stroke-width="2"/><line x1="160.4" y1="372.0" x2="140.2" y2="406.0" stroke="#252525" stroke-width="2"/><line x1="195.6" y1="372.0" x2="215.8" y2="406.0" stroke="#252525" stroke-width="2"/><text x="178" y="408.0" text-anchor="middle" class="label">林晚</text></g><g opacity="1"><rect x="170" y="406" width="20" height="60" rx="4" fill="#f1dfbd" stroke="#7a6040" stroke-width="2"/><path d="M180 388 C162 408,198 408,180 388" fill="#e3a847" stroke="#a25a2e" stroke-width="2"/><text x="180" y="492" text-anchor="middle" class="label">蜡烛</text></g><circle cx="180" cy="438" r="86" fill="#111" opacity=".35"/>
+</svg>

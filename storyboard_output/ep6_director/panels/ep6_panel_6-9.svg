@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 640" role="img" aria-label="6-9 太干净有鬼">
+<defs>
+<marker id="arrow-red" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#a75858"/></marker>
+<style>
+.title{font:700 20px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#1f1f1f}
+.sub{font:600 13px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#5f564d}
+.label{font:700 13px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#222}
+.note{font:800 20px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#1f1f1f}
+.tiny{font:600 12px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#5f564d}
+</style>
+</defs>
+<rect width="360" height="640" fill="#fbfaf7"/>
+<rect x="16" y="16" width="328" height="608" rx="14" fill="#fffdf8" stroke="#cfc6ba" stroke-width="2"/>
+<text x="28" y="48" class="title">6-9｜太干净有鬼</text>
+<text x="28" y="72" class="sub">特写｜微距推近手指敲桌｜5秒</text>
+<rect x="28" y="104" width="304" height="436" rx="8" fill="#f1eee7" stroke="#252525" stroke-width="3"/><path d="M80 520 C110 360, 250 360, 284 520 Z" fill="#6d5b4a" stroke="#252525" stroke-width="3"/><circle cx="180" cy="250" r="88" fill="#f3dfc8" stroke="#252525" stroke-width="3"/><path d="M114 206 C150 156, 218 156, 250 206" fill="none" stroke="#252525" stroke-width="5"/><line x1="140" y1="242" x2="166" y2="238" stroke="#252525" stroke-width="4"/><line x1="196" y1="238" x2="224" y2="242" stroke="#252525" stroke-width="4"/><path d="M154 298 C174 312, 200 312, 220 298" fill="none" stroke="#252525" stroke-width="3"/>
+</svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" role="img">
+<defs>
+<marker id="arr" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#356d9b"/></marker>
+<style>
+.page-title{font:800 26px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#1f1f1f}
+.page-label{font:800 21px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#8a6538}
+.page-text{font:600 20px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#2b2b2b}
+.svg-name{font:700 14px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#222}
+.svg-muted{font:700 13px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#6d655d}
+.svg-cam{font:900 15px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#356d9b}
+</style>
+</defs>
+<rect width="1080" height="1920" fill="#f3eee6"/>
+<text x="54" y="62" class="page-title">第15集导演分镜图｜视频 2 / 5</text>
+<g transform="translate(54,116)">
+<rect x="0" y="0" width="960" height="500" rx="10" fill="#fffdf8" stroke="#cfc6ba" stroke-width="2"/>
+<text x="26" y="42" class="page-title">15-1-4｜00:00-00:05｜中近景</text>
+<image href="../panels/ep15_panel_15-1-4.svg" x="26" y="72" width="200" height="356"/>
+<g transform="translate(260,76) scale(0.78)"><defs><marker id="arr" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#356d9b"/></marker></defs><rect x="12" y="12" width="336" height="316" rx="10" fill="#fbfaf7" stroke="#cfc6ba"/><rect x="46" y="42" width="268" height="66" rx="8" fill="#eee6dc" stroke="#d7c9bb"/><text x="180" y="80" text-anchor="middle" class="svg-muted">谪仙馆后院 / 主轴线</text><path d="M 182 312 L 118 134 L 246 134 Z" fill="#7aa0c4" opacity=".16" stroke="#356d9b" stroke-width="2"/><line x1="182" y1="312" x2="182" y2="176" stroke="#356d9b" stroke-width="4" marker-end="url(#arr)"/><polygon points="164,326 200,326 182,290" fill="#356d9b"/><text x="182" y="350" text-anchor="middle" class="svg-cam">CAM</text><text x="320" y="318" text-anchor="end" class="svg-muted">双人轴线 / FOV</text><circle cx="132" cy="190" r="22" fill="#d89b65" stroke="#252525" stroke-width="2"/><text x="132" y="232" text-anchor="middle" class="svg-name">林晚</text><circle cx="206" cy="164" r="22" fill="#586a83" stroke="#252525" stroke-width="2"/><text x="206" y="206" text-anchor="middle" class="svg-name">谢清越</text><rect x="83" y="212" width="26" height="20" rx="4" fill="#9bb26c" stroke="#252525" stroke-width="2"/><text x="96" y="254" text-anchor="middle" class="svg-name">药材</text><rect x="177" y="174" width="26" height="20" rx="4" fill="#d8c49a" stroke="#252525" stroke-width="2"/><text x="190" y="216" text-anchor="middle" class="svg-name">折扇</text></g>
+<text x="560" y="120" class="page-label">导演备注</text>
+<text x="560" y="154" class="page-text">跟随谢清越靠近药架</text>
+<text x="560" y="202" class="page-label">画面动作</text>
+<text x="560" y="236" class="page-text">谢清越警惕环顾四周，俯身靠近林晚，神色严肃。林晚</text><text x="560" y="266" class="page-text">低头皱眉翻找药材。</text>
+</g><g transform="translate(54,704)">
+<rect x="0" y="0" width="960" height="500" rx="10" fill="#fffdf8" stroke="#cfc6ba" stroke-width="2"/>
+<text x="26" y="42" class="page-title">15-1-5｜00:05-00:10｜近景</text>
+<image href="../panels/ep15_panel_15-1-5.svg" x="26" y="72" width="200" height="356"/>
+<g transform="translate(260,76) scale(0.78)"><defs><marker id="arr" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#356d9b"/></marker></defs><rect x="12" y="12" width="336" height="316" rx="10" fill="#fbfaf7" stroke="#cfc6ba"/><rect x="46" y="42" width="268" height="66" rx="8" fill="#eee6dc" stroke="#d7c9bb"/><text x="180" y="80" text-anchor="middle" class="svg-muted">谪仙馆后院 / 主轴线</text><path d="M 182 312 L 118 134 L 246 134 Z" fill="#7aa0c4" opacity=".16" stroke="#356d9b" stroke-width="2"/><line x1="182" y1="312" x2="182" y2="176" stroke="#356d9b" stroke-width="4" marker-end="url(#arr)"/><polygon points="164,326 200,326 182,290" fill="#356d9b"/><text x="182" y="350" text-anchor="middle" class="svg-cam">CAM</text><text x="320" y="318" text-anchor="end" class="svg-muted">双人轴线 / FOV</text><circle cx="132" cy="190" r="22" fill="#d89b65" stroke="#252525" stroke-width="2"/><text x="132" y="232" text-anchor="middle" class="svg-name">林晚</text><circle cx="206" cy="164" r="22" fill="#586a83" stroke="#252525" stroke-width="2"/><text x="206" y="206" text-anchor="middle" class="svg-name">谢清越</text><rect x="83" y="212" width="26" height="20" rx="4" fill="#9bb26c" stroke="#252525" stroke-width="2"/><text x="96" y="254" text-anchor="middle" class="svg-name">药材</text><rect x="177" y="174" width="26" height="20" rx="4" fill="#d8c49a" stroke="#252525" stroke-width="2"/><text x="190" y="216" text-anchor="middle" class="svg-name">折扇</text></g>
+<text x="560" y="120" class="page-label">导演备注</text>
+<text x="560" y="154" class="page-text">固定，折扇敲肩</text>
+<text x="560" y="202" class="page-label">画面动作</text>
+<text x="560" y="236" class="page-text">谢清越用折扇轻敲林晚肩膀。林晚停下动作，看他一眼</text><text x="560" y="266" class="page-text">，单手托巴作思考状。</text>
+</g><g transform="translate(54,1292)">
+<rect x="0" y="0" width="960" height="500" rx="10" fill="#fffdf8" stroke="#cfc6ba" stroke-width="2"/>
+<text x="26" y="42" class="page-title">15-1-6｜00:10-00:15｜中景至全景</text>
+<image href="../panels/ep15_panel_15-1-6.svg" x="26" y="72" width="200" height="356"/>
+<g transform="translate(260,76) scale(0.78)"><defs><marker id="arr" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#356d9b"/></marker></defs><rect x="12" y="12" width="336" height="316" rx="10" fill="#fbfaf7" stroke="#cfc6ba"/><rect x="46" y="42" width="268" height="66" rx="8" fill="#eee6dc" stroke="#d7c9bb"/><text x="180" y="80" text-anchor="middle" class="svg-muted">谪仙馆后院 / 主轴线</text><path d="M 102 304 L 146 76 L 274 76 Z" fill="#7aa0c4" opacity=".16" stroke="#356d9b" stroke-width="2"/><line x1="102" y1="304" x2="210" y2="118" stroke="#356d9b" stroke-width="4" marker-end="url(#arr)"/><polygon points="84,318 120,318 102,282" fill="#356d9b"/><text x="102" y="342" text-anchor="middle" class="svg-cam">CAM</text><text x="320" y="318" text-anchor="end" class="svg-muted">离场慢拉 / FOV</text><circle cx="122" cy="210" r="22" fill="#d89b65" stroke="#252525" stroke-width="2"/><text x="122" y="252" text-anchor="middle" class="svg-name">林晚</text><circle cx="238" cy="92" r="22" fill="#586a83" stroke="#252525" stroke-width="2"/><text x="238" y="134" text-anchor="middle" class="svg-name">谢清越</text><rect x="243" y="110" width="26" height="20" rx="4" fill="#d8c49a" stroke="#252525" stroke-width="2"/><text x="256" y="152" text-anchor="middle" class="svg-name">折扇</text><path d="M 238 92 C 250 70, 272 58, 302 48" fill="none" stroke="#a75858" stroke-width="3" stroke-dasharray="8 7" marker-end="url(#arr)"/></g>
+<text x="560" y="120" class="page-label">导演备注</text>
+<text x="560" y="154" class="page-text">慢拉，谢清越转身离开</text>
+<text x="560" y="202" class="page-label">画面动作</text>
+<text x="560" y="236" class="page-text">谢清越一愣，傲娇扬下巴，迅速转身大步朝院外走去。</text><text x="560" y="266" class="page-text">林晚看着背影，嘴角轻勾，眼中有小担忧。</text>
+</g>
+</svg>

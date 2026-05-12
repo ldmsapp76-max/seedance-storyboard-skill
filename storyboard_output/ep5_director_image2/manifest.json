@@ -1,0 +1,12 @@
+{
+  "episode": "第5集",
+  "shot_count": 24,
+  "total_seconds": 131,
+  "prompt_batches": [
+    "storyboard_output\\ep5_director_image2\\prompts\\batch_01.txt",
+    "storyboard_output\\ep5_director_image2\\prompts\\batch_02.txt",
+    "storyboard_output\\ep5_director_image2\\prompts\\batch_03.txt",
+    "storyboard_output\\ep5_director_image2\\prompts\\batch_04.txt"
+  ],
+  "html": "storyboard_output\\ep5_director_image2\\ep5_director_storyboard_image2.html"
+}

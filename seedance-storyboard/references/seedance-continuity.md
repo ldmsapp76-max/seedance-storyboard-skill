@@ -1,70 +1,70 @@
-# Seedance 2.0 Continuity Rules
+# Seedance 2.0 连续性规则
 
-## Segment Duration
+## 视频段时长
 
-- Treat 15 seconds as a hard maximum for each Seedance 2.0 video segment.
-- Prefer 6-12 seconds for most AI真人剧 segments.
-- Use 12-15 seconds only for a continuous performance beat, slow reveal, or action that would break if split.
-- Never hide overlength content by saying "about 15 seconds" when the planned action needs more time.
+- 每条 Seedance 2.0 视频段最长 15 秒，这是硬上限。
+- 大多数 AI 真人剧视频段优先控制在 6-12 秒。
+- 只有连续表演节拍、慢揭示，或拆开会破坏动作的段落，才使用 12-15 秒。
+- 不要用“约 15 秒”掩盖实际动作已经超长的问题。
 
-## Segment Composition
+## 视频段构成
 
-Each segment should usually contain:
+每个视频段通常应包含：
 
-- One continuous micro-beat, or
-- Two closely related shots, or
-- Three very simple shots when action is minimal and geography is stable.
+- 一个连续微节拍，或
+- 两个紧密相关的镜头，或
+- 三个非常简单的镜头，前提是动作少、空间稳定。
 
-Avoid packing a full scene into one segment. Split at:
+不要把完整一场戏塞进一个视频段。遇到以下情况应拆段：
 
-- A change in speaker dominance.
-- A reveal or reaction.
-- A character entering/exiting.
-- A prop changing hands.
-- A camera-axis reset.
-- A physical action that changes positions.
+- 主导发言人变化。
+- 揭示或反应。
+- 人物进入或离开。
+- 道具换手。
+- 镜头轴线重置。
+- 身体动作导致位置关系变化。
 
-## Required Anchors
+## 必要锚点
 
-Every segment needs:
+每个视频段都需要：
 
-- `First-frame anchor`: exact character positions, body orientation, camera size, major props, and emotional state at the opening frame.
-- `Last-frame anchor`: exact final pose, gaze, prop state, camera relation, and any movement endpoint.
-- `Continuity handoff`: what the next segment must preserve.
+- `First-frame anchor`：开场帧中的准确人物位置、身体朝向、景别、主要道具和情绪状态。
+- `Last-frame anchor`：结束帧中的准确姿势、视线、道具状态、镜头关系和运动终点。
+- `Continuity handoff`：下一段必须保留什么。
 
-Write anchors visually, not abstractly. "她很生气" is insufficient; use "她站在画面右侧，右手攥着手机，肩膀僵硬，盯向画面左侧的男主".
+锚点要写成视觉事实，不要写抽象情绪。“她很生气”不够；应写成“她站在画面右侧，右手攥着手机，肩膀僵硬，盯向画面左侧的男主”。
 
-## Prompt Strategy
+## 提示词策略
 
-For each segment prompt:
+每个视频段提示词应：
 
-- Start with the stable identity and location.
-- State camera framing and motion.
-- State character blocking in screen directions.
-- State one main action and one emotional subtext.
-- Preserve wardrobe, props, lighting, and spatial relation.
-- Keep dialogue guidance concise; do not overload visual prompts with long spoken lines.
-- Write sound cues with natural timing phrases such as `镜头开头`, `镜头中段`, `镜头末尾`, or `第X秒`; avoid `@00:14`, `@XS`, and other symbolic timecode tags.
+- 从稳定身份和地点开始。
+- 写清景别、机位和运镜。
+- 用画面方向写清人物调度。
+- 只设置一个主动作和一个情绪潜台词。
+- 保持服装、道具、光线和空间关系一致。
+- 对白提示要简洁，不要用很长的台词淹没视觉提示。
+- 音效时间用自然语言，例如 `镜头开头`、`镜头中段`、`镜头末尾`、`第X秒`；避免 `@00:14`、`@XS` 等符号式时间码。
 
-## Text And Subtitle Control
+## 文字和字幕控制
 
-The no-subtitle rule exists mainly to stop Seedance 2.0 from adding dialogue subtitles or explanatory text overlays.
+“禁止字幕”主要是为了阻止 Seedance 2.0 生成对白字幕或解释性文字叠加。
 
-Forbidden:
+禁止：
 
-- Dialogue subtitles, karaoke-style captions, speech-to-text captions, title cards, explanatory cards, floating labels, UI-like overlay text, watermarks, and any text added outside the story world.
-- Converting spoken dialogue into visible text on screen.
+- 对白字幕、卡拉 OK 式字幕、语音转文字字幕、标题卡、解释卡、悬浮标签、UI 式叠加文字、水印，以及任何剧情世界之外新增的文字。
+- 把角色对白转换成屏幕上的可见文字。
 
-Allowed:
+允许：
 
-- Story-critical diegetic prop text that physically exists inside the scene: paper notes, signboards, letters, official documents, price plaques, phone screens, book covers, labels, or inscriptions.
-- Prop text should be described as an object detail, with owner, position, orientation, and whether it is readable.
+- 剧情关键的实物文字：纸条、招牌、信件、官文、价签、手机屏幕、书封、标签、铭文等。
+- 道具文字应作为物体细节描述，写清归属、位置、朝向，以及是否可读。
 
-## 避免项 Field
+## `避免项` 字段
 
-Use a unified Chinese `避免项` field for every segment. Do not mix English `Avoid` with Chinese labels in the same output.
+每个视频段使用统一中文字段 `避免项`。不要在同一输出里混用英文 `Avoid` 和中文标签。
 
-Template:
+模板：
 
 ```text
 避免项：
@@ -72,16 +72,16 @@ Template:
 本段特殊避免项：不要交换人物站位；不要改变服装发型；不要把道具换到错误的手；不要增加额外人物；不要越轴。
 ```
 
-Adjust `本段特殊避免项` to the segment's real risks. Keep `固定避免项` stable unless the user changes the rules.
+根据本段真实风险调整 `本段特殊避免项`。除非用户改规则，否则保持 `固定避免项` 稳定。
 
-## Cross-Segment Handoff
+## 跨段交接
 
-The next segment should begin from the previous segment's last-frame anchor unless a clear transition resets time or place.
+除非有明确转场重置时间或地点，下一段应从上一段的尾帧锚点开始。
 
-For hard cuts, repeat the essential last-frame details as the next first-frame anchor.
+硬切时，把上一段尾帧的关键细节重复为下一段首帧锚点。
 
-For time jumps, state the reset explicitly: "新段落从半小时后开始，空间关系重新建立".
+时间跳跃时，明确写出重置：“新段落从半小时后开始，空间关系重新建立”。
 
-For camera-angle changes, preserve screen direction:
+机位变化时，保持画面方向：
 
-- If the woman is screen-right looking left in segment A, do not make her screen-left looking right in segment B unless the camera axis is intentionally reset.
+- 如果 A 段中女子在画面右侧、看向左侧，B 段不要让她变成画面左侧、看向右侧，除非镜头轴线被明确重置。

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 640" role="img" aria-label="5-22 锁灵玉微光">
+<defs>
+<marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#586a83"/></marker>
+<marker id="arrow-red" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#a75858"/></marker>
+<style>
+.title{font:700 20px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#1f1f1f}
+.sub{font:600 13px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#5f564d}
+.label{font:700 13px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#222}
+.note{font:700 18px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#1f1f1f}
+.tiny{font:600 12px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#5f564d}
+</style>
+</defs>
+<rect width="360" height="640" fill="#fbfaf7"/>
+<rect x="16" y="16" width="328" height="608" rx="14" fill="#fffdf8" stroke="#cfc6ba" stroke-width="2"/>
+<text x="28" y="48" class="title">5-22｜锁灵玉微光</text>
+<text x="28" y="72" class="sub">特写｜缓慢推近袖中微光｜5秒</text>
+<rect x="38" y="98" width="284" height="438" rx="8" fill="#141922" stroke="#252525" stroke-width="3"/><path d="M92 148 C160 218, 244 284, 286 506" fill="none" stroke="#5f6d82" stroke-width="74" stroke-linecap="round"/><path d="M118 350 C152 318, 215 316, 250 354 C225 390, 162 394, 118 350 Z" fill="#2b3446" stroke="#bcc0c8" stroke-width="3"/><circle cx="184" cy="354" r="35" fill="#a8eee5" opacity=".85" stroke="#2f6d6a" stroke-width="4"/><circle cx="184" cy="354" r="58" fill="#82c9c2" opacity=".18"/><text x="184" y="446" text-anchor="middle" class="note">袖中锁灵玉异动</text>
+</svg>

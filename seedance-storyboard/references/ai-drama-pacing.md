@@ -1,141 +1,141 @@
-# AI真人剧 Pacing Guide
+# AI 真人剧节奏指南
 
-## Default Shot Timing
+## 默认镜头时长
 
-Use these as starting points, then adjust for script intent:
+以下时长作为起点，再根据剧本意图调整：
 
-| Shot type | Typical duration | Use for |
+| 镜头类型 | 常见时长 | 用途 |
 |---|---:|---|
-| Establishing or location reset | 1-3s | Place, time, relationship geography |
-| Two-shot | 3-6s | Conflict setup, power relation, shared action |
-| Medium close-up | 3-5s | Dialogue line, listening, tension |
-| Close-up | 2-4s | Reaction, realization, lie, decision |
-| Insert | 1-2.5s | Phone, document, weapon, ring, message |
-| Continuous action | 5-10s | Entering, crossing room, handing object |
-| Suspense hold | 4-8s | Waiting, hesitation, reveal buildup |
+| 建立镜头或空间重置 | 1-3s | 地点、时间、人物关系地理 |
+| 双人镜头 | 3-6s | 冲突铺垫、权力关系、共同动作 |
+| 中近景 | 3-5s | 对白、聆听、紧张感 |
+| 近景 | 2-4s | 反应、醒悟、撒谎、决定 |
+| 插入特写 | 1-2.5s | 手机、文书、武器、戒指、消息 |
+| 连续动作 | 5-10s | 进门、穿过房间、递交道具 |
+| 悬念停顿 | 4-8s | 等待、犹豫、揭示铺垫 |
 
-## Lens Defaults
+## 默认镜头/焦段
 
-Use a consistent lens vocabulary when generating Seedance shot prompts:
+生成 Seedance 镜头提示词时，使用一致的镜头词汇：
 
-- `24mm广角`: street geography, crowds, establishing shots, spatial resets.
-- `35mm定焦`: walking shots, two-person movement, medium spatial relation.
-- `50mm定焦`: dialogue, medium close-ups, ordinary reactions.
-- `85mm定焦`: emotional close-ups, sweet smiles, shame, anger, tension.
-- `100mm微距`: props, mechanisms, paper notes, jewelry, waist detail, hands.
+- `24mm广角`：街道地理、人群、建立镜头、空间重置。
+- `35mm定焦`：行走镜头、双人移动、中等空间关系。
+- `50mm定焦`：对白、中近景、普通反应。
+- `85mm定焦`：情绪近景、甜笑、羞辱、愤怒、紧张。
+- `100mm微距`：道具、机关、纸条、首饰、腰间细节、手部。
 
-Every shot in a Seedance prompt should include focal length or lens type. If exact lens choice is uncertain, choose from this default set based on shot intent.
+Seedance 提示词里的每个镜头都应包含焦距或镜头类型。如果不确定具体镜头，就按镜头意图从这组默认值中选择。
 
-## Shot Size Logic
+## 景别逻辑
 
-Choose shot size by story function, not decoration. The default logic is: wide shots explain space, medium shots manage blocking, close shots carry performance, inserts prove plot facts.
+按剧情功能选择景别，而不是为了装饰。默认逻辑是：全景解释空间，中景管理走位，近景承载表演，插入特写证明剧情事实。
 
-Use `全景` or `远景` when:
+使用 `全景` 或 `远景` 的情况：
 
-- Starting a new location or resetting geography.
-- Showing who surrounds whom, crowd pressure, entrance/exit, or distance.
-- A physical action changes multiple people's positions.
-- The audience may otherwise lose track of where characters stand.
-- In short-drama openings, keep the establishing wide shot brief, usually 1-2 seconds, then cut into faces.
+- 开始新地点或重置空间地理。
+- 展示谁围住谁、人群压力、进入/离开、距离关系。
+- 身体动作会改变多个人的位置。
+- 如果不用宽镜，观众可能搞不清人物站位。
+- 短剧开头的建立镜头通常很短，1-2 秒即可，然后快速切入人物表情。
 
-Use `中景` when:
+使用 `中景` 的情况：
 
-- Showing body movement, handoff, approach, retreat, or two-person relation.
-- A character crosses in front of another or changes screen side.
-- Dialogue depends on visible posture, distance, or power relation.
+- 展示身体移动、交接、靠近、后退、双人关系。
+- 人物从另一个人前方经过，或改变画面侧位。
+- 对白依赖可见姿态、距离或权力关系。
 
-Use `中近景` when:
+使用 `中近景` 的情况：
 
-- Dialogue and reaction both matter.
-- The frame needs face, upper body, and hand prop at the same time.
-- A character is listening, hesitating, testing, or hiding intent.
-- The scene is a verbal confrontation with stable positions; this is the default coverage size.
+- 对白和反应都重要。
+- 画面需要同时看到脸、上半身和手中道具。
+- 人物正在聆听、犹豫、试探或隐藏意图。
+- 场景是位置稳定的语言交锋；这是默认覆盖景别。
 
-Use `近景` or `特写` when:
+使用 `近景` 或 `特写` 的情况：
 
-- The beat is an emotional turn: shame, threat, realization, lie, sweet smile, anger, fear.
-- A joke lands through expression or timing.
-- The audience must read eyes, mouth, breathing, hand tension, or micro-reaction.
-- A main character's rebuttal, reveal, or power shift needs a held performance moment.
+- 节拍是情绪转折：羞辱、威胁、醒悟、撒谎、甜笑、愤怒、恐惧。
+- 笑点通过表情或节奏落地。
+- 观众必须读到眼神、嘴角、呼吸、手部紧张或微反应。
+- 主角的反击、揭示或权力变化需要一个持住的表演瞬间。
 
-Use `大特写` or `插入特写` when:
+使用 `大特写` 或 `插入特写` 的情况：
 
-- A prop is evidence: paper note, sign, phone, letter, document, weapon, ring, medicine, blood mark, missing object.
-- A mechanism changes state: latch opens, spring releases, powder sprays, small copper piece turns.
-- The shot must prove a cause or prevent audience confusion.
+- 道具是证据：纸条、招牌、手机、信件、文书、武器、戒指、药、血迹、丢失物。
+- 机关状态变化：锁扣打开、弹簧释放、粉末喷出、小铜件转动。
+- 镜头必须证明因果，或防止观众误解。
 
-After a close-up chain, return to `中景` or `全景` when:
+一串近景后，在以下情况回到 `中景` 或 `全景`：
 
-- Characters move.
-- A prop changes owner.
-- A crowd reaction changes the social pressure.
-- The next beat depends on distance or screen direction.
+- 人物移动。
+- 道具换主人。
+- 人群反应改变社会压力。
+- 下一个节拍依赖距离或画面方向。
 
-For public conflict scenes, use reaction coverage deliberately:
+公开冲突场景中，反应镜头要有意图：
 
-- Cut to the listener when a line wounds, exposes, or pressures them.
-- Cut to a third-party reaction when social judgment matters.
-- Return to the speaker when they retake control.
-- Keep the principal character visually dominant during their reversal; do not overcut away from the decisive expression.
+- 台词刺痛、揭穿或压迫某人时，切到聆听者。
+- 社会评价重要时，切第三方反应。
+- 说话者重新掌控局面时，切回说话者。
+- 主角反转时应保持视觉主导，不要在关键表情上过度切走。
 
-Avoid:
+避免：
 
-- Starting a complex scene with only close-ups.
-- Using inserts that do not change plot understanding.
-- Cutting from one close-up to another when the audience needs to know where people are.
-- Letting the camera get so close that Seedance loses hands, props, or body orientation needed for continuity.
+- 用一堆近景开始复杂场景。
+- 使用不改变剧情理解的插入特写。
+- 在观众需要知道人物位置时，从一个近景直接切另一个近景。
+- 镜头近到让 Seedance 丢失手、道具或身体朝向等连续性信息。
 
-## Shot Count Targets
+## 镜头数量目标
 
-For AI真人短剧:
+AI 真人短剧参考：
 
-- 15-second segment: usually 2-5 shots, or 1 continuous performance shot.
-- 30-second scene: usually 6-10 shots.
-- 60-second scene: usually 12-20 shots.
-- Dialogue-heavy 60-second scene: fewer shots if performances need continuity.
-- Action-heavy 60-second scene: more shots, but include wider geography resets.
+- 15 秒视频段：通常 2-5 个镜头，或 1 个连续表演镜头。
+- 30 秒场景：通常 6-10 个镜头。
+- 60 秒场景：通常 12-20 个镜头。
+- 对白重的 60 秒场景：如果表演需要连续性，镜头可更少。
+- 动作重的 60 秒场景：镜头可更多，但要包含宽镜空间重置。
 
-For the user's prior examples, a practical default is 3-4 shots per 15-second Seedance segment, with most shots lasting 3-5 seconds.
+根据用户历史示例，实用默认值是：每个 15 秒 Seedance 视频段 3-4 个镜头，多数镜头 3-5 秒。
 
-For pure dialogue confrontation with stable blocking, a 15-second segment can contain 4-6 shots. For mechanism action, prop transfer, crowd movement, or spatial changes, keep the safer 3-4 shot target.
+纯对白交锋且走位稳定时，15 秒视频段可以包含 4-6 个镜头。机关动作、道具交接、人群运动或空间变化时，使用更稳妥的 3-4 镜头目标。
 
-## Rhythm Patterns
+## 节奏模式
 
-Conflict dialogue:
+冲突对白：
 
-1. Two-shot establishes distance and power.
-2. Medium close-up on speaker.
-3. Reaction close-up.
-4. Insert or hand movement if plot-relevant.
-5. Return to two-shot when positions change.
+1. 双人镜头建立距离和权力关系。
+2. 中近景给说话者。
+3. 反应近景。
+4. 如果和剧情有关，加入插入特写或手部动作。
+5. 位置变化时回到双人镜头。
 
-Reveal:
+揭示：
 
-1. Setup close-up or insert.
-2. Hold on discovery.
-3. Reaction close-up.
-4. Wider shot showing changed relationship.
+1. 铺垫近景或插入特写。
+2. 在发现瞬间停住。
+3. 反应近景。
+4. 更宽镜头展示关系变化。
 
-Confrontation:
+对峙：
 
-1. Wide or two-shot establishes face-off.
-2. Alternating close-ups intensify.
-3. Insert of decisive prop/action.
-4. Final held close-up or exit frame.
+1. 全景或双人镜头建立面对面关系。
+2. 交替近景加强冲突。
+3. 插入决定性道具或动作。
+4. 最后用持住的近景或离场帧收束。
 
-Reference AI真人短剧 dialogue rhythm:
+AI 真人短剧对白节奏参考：
 
-1. Use a 1-2 second establishing shot only to identify place, public pressure, and who is present.
-2. Move quickly into medium close-ups and close-ups for faces, eye lines, posture, and social pressure.
-3. Use two-shots or medium shots when distance, power relation, crowd pressure, or approach/retreat changes.
-4. Hold the protagonist's key rebuttal or reversal in close-up for 4-6 seconds when the expression and pause matter.
-5. Cut tight listener reactions after verbal hits, then return to the speaker or a third-party reaction.
-6. Keep platform-style dialogue subtitles out of Seedance prompts; spoken lines stay audio only.
+1. 只用 1-2 秒建立镜头说明地点、公共压力和在场人物。
+2. 快速进入中近景和近景，覆盖脸、视线、姿态和社会压力。
+3. 当距离、权力关系、人群压力、靠近/后退发生变化时，使用双人镜头或中景。
+4. 主角关键反击或反转可以用近景持住 4-6 秒，让表情和停顿成立。
+5. 语言打击后切紧的聆听者反应，再回到说话者或第三方反应。
+6. Seedance 提示词中不要出现平台式对白字幕；对白只作为语音存在。
 
-## AI Reliability Notes
+## AI 可靠性注意事项
 
-- Keep each shot's physical action simple.
-- Avoid crowd scenes unless the script requires them.
-- Limit hand-specific actions unless the prop is central and anchored.
-- Avoid rapid changes in wardrobe, hair, lighting, or location within one segment.
-- Make emotional changes visible through posture, gaze, distance, and timing.
+- 每个镜头的身体动作保持简单。
+- 除非剧本需要，避免复杂人群场面。
+- 除非道具是核心并已锚定，否则减少左右手特定动作。
+- 避免在同一视频段中快速改变服装、发型、光线或地点。
+- 用姿态、视线、距离和节奏让情绪变化可见。

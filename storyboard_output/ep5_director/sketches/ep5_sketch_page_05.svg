@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" role="img">
+<defs>
+<marker id="arr" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#356d9b"/></marker>
+<style>
+.page-title{font:800 26px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#1f1f1f}
+.page-label{font:800 21px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#8a6538}
+.page-text{font:600 20px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#2b2b2b}
+.svg-name{font:700 14px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#222}
+.svg-muted{font:700 13px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#6d655d}
+.svg-cam{font:900 15px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#356d9b}
+</style>
+</defs>
+<rect width="1080" height="1920" fill="#f3eee6"/>
+<text x="54" y="54" class="page-title">第5集导演草图页 5 / 6</text>
+
+<g transform="translate(54,94)">
+<rect x="0" y="0" width="960" height="386" rx="10" fill="#fffdf8" stroke="#cfc6ba" stroke-width="2"/>
+<text x="26" y="42" class="page-title">5-17｜回头叫住｜4秒</text>
+<image href="../panels/ep5_panel_5-17.svg" x="26" y="62" width="170" height="302"/>
+<g transform="translate(228,54) scale(0.72)"><defs><marker id="arr" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#356d9b"/></marker></defs><rect x="12" y="12" width="336" height="316" rx="10" fill="#fbfaf7" stroke="#cfc6ba"/><rect x="46" y="42" width="268" height="66" rx="8" fill="#ebe5dc" stroke="#d7c9bb"/><text x="180" y="80" text-anchor="middle" class="svg-muted">御花园回廊纵深 / 外侧暖光 / 内侧冷光</text><line x1="70" y1="120" x2="300" y2="120" stroke="#b9afa3" stroke-width="3" stroke-dasharray="10 8"/><path d="M 280 282 L 161 98 L 289 98 Z" fill="#7aa0c4" opacity=".16" stroke="#356d9b" stroke-width="2"/><line x1="280" y1="282" x2="225" y2="140" stroke="#356d9b" stroke-width="4" marker-end="url(#arr)"/><polygon points="262,296 298,296 280,260" fill="#356d9b"/><text x="280" y="320" text-anchor="middle" class="svg-cam">CAM</text><text x="320" y="330" text-anchor="end" class="svg-muted">谢侧 / FOV</text><circle cx="128" cy="210" r="22" fill="#d89b65" stroke="#252525" stroke-width="2"/><text x="128" y="252" text-anchor="middle" class="svg-name">苏明舒</text><circle cx="238" cy="98" r="22" fill="#586a83" stroke="#252525" stroke-width="2"/><text x="238" y="140" text-anchor="middle" class="svg-name">谢临舟</text><circle cx="78" cy="248" r="22" fill="#78a06f" stroke="#252525" stroke-width="2"/><text x="78" y="290" text-anchor="middle" class="svg-name">青枝</text><circle cx="284" cy="124" r="22" fill="#8b7a68" stroke="#252525" stroke-width="2"/><text x="284" y="166" text-anchor="middle" class="svg-name">石墩</text><path d="M 238 98 C 250 78, 262 62, 280 48" fill="none" stroke="#a75858" stroke-width="3" stroke-dasharray="8 7" marker-end="url(#arr)"/></g>
+<text x="520" y="92" class="page-label">导演备注</text>
+<text x="520" y="126" class="page-text">中近景 / 谢临舟背侧，停下回头半侧脸</text>
+<text x="520" y="158" class="page-text">轻微推近谢临舟停步动作</text>
+<text x="520" y="198" class="page-label">画面动作</text>
+<text x="520" y="232" class="page-text">谢临舟走出两步，又停下，谢临舟：苏小姐。苏明舒抬</text><text x="520" y="262" class="page-text">眼看向他。</text>
+</g>
+<g transform="translate(54,552)">
+<rect x="0" y="0" width="960" height="386" rx="10" fill="#fffdf8" stroke="#cfc6ba" stroke-width="2"/>
+<text x="26" y="42" class="page-title">5-18｜苏明舒抬眼｜4秒</text>
+<image href="../panels/ep5_panel_5-18.svg" x="26" y="62" width="170" height="302"/>
+<g transform="translate(228,54) scale(0.72)"><defs><marker id="arr" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#356d9b"/></marker></defs><rect x="12" y="12" width="336" height="316" rx="10" fill="#fbfaf7" stroke="#cfc6ba"/><rect x="46" y="42" width="268" height="66" rx="8" fill="#ebe5dc" stroke="#d7c9bb"/><text x="180" y="80" text-anchor="middle" class="svg-muted">御花园回廊纵深 / 外侧暖光 / 内侧冷光</text><line x1="70" y1="120" x2="300" y2="120" stroke="#b9afa3" stroke-width="3" stroke-dasharray="10 8"/><path d="M 130 306 L 86 146 L 214 146 Z" fill="#7aa0c4" opacity=".16" stroke="#356d9b" stroke-width="2"/><line x1="130" y1="306" x2="150" y2="188" stroke="#356d9b" stroke-width="4" marker-end="url(#arr)"/><polygon points="112,320 148,320 130,284" fill="#356d9b"/><text x="130" y="344" text-anchor="middle" class="svg-cam">CAM</text><text x="320" y="330" text-anchor="end" class="svg-muted">苏侧 / FOV</text><circle cx="128" cy="210" r="22" fill="#d89b65" stroke="#252525" stroke-width="2"/><text x="128" y="252" text-anchor="middle" class="svg-name">苏明舒</text><circle cx="238" cy="98" r="22" fill="#586a83" stroke="#252525" stroke-width="2"/><text x="238" y="140" text-anchor="middle" class="svg-name">谢临舟</text><circle cx="78" cy="248" r="22" fill="#78a06f" stroke="#252525" stroke-width="2"/><text x="78" y="290" text-anchor="middle" class="svg-name">青枝</text><circle cx="284" cy="124" r="22" fill="#8b7a68" stroke="#252525" stroke-width="2"/><text x="284" y="166" text-anchor="middle" class="svg-name">石墩</text></g>
+<text x="520" y="92" class="page-label">导演备注</text>
+<text x="520" y="126" class="page-text">近景 / 苏明舒正面，视线抬向谢临舟</text>
+<text x="520" y="158" class="page-text">轻微推近苏明舒疑惑表情</text>
+<text x="520" y="198" class="page-label">画面动作</text>
+<text x="520" y="232" class="page-text">苏明舒抬眼，刚才的窘意被好奇压下，安静等谢临舟继</text><text x="520" y="262" class="page-text">续说。</text>
+</g>
+<g transform="translate(54,1010)">
+<rect x="0" y="0" width="960" height="386" rx="10" fill="#fffdf8" stroke="#cfc6ba" stroke-width="2"/>
+<text x="26" y="42" class="page-title">5-19｜回头补刀｜7秒</text>
+<image href="../panels/ep5_panel_5-19.svg" x="26" y="62" width="170" height="302"/>
+<g transform="translate(228,54) scale(0.72)"><defs><marker id="arr" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#356d9b"/></marker></defs><rect x="12" y="12" width="336" height="316" rx="10" fill="#fbfaf7" stroke="#cfc6ba"/><rect x="46" y="42" width="268" height="66" rx="8" fill="#ebe5dc" stroke="#d7c9bb"/><text x="180" y="80" text-anchor="middle" class="svg-muted">御花园回廊纵深 / 外侧暖光 / 内侧冷光</text><line x1="70" y1="120" x2="300" y2="120" stroke="#b9afa3" stroke-width="3" stroke-dasharray="10 8"/><path d="M 280 282 L 161 98 L 289 98 Z" fill="#7aa0c4" opacity=".16" stroke="#356d9b" stroke-width="2"/><line x1="280" y1="282" x2="225" y2="140" stroke="#356d9b" stroke-width="4" marker-end="url(#arr)"/><polygon points="262,296 298,296 280,260" fill="#356d9b"/><text x="280" y="320" text-anchor="middle" class="svg-cam">CAM</text><text x="320" y="330" text-anchor="end" class="svg-muted">谢侧 / FOV</text><circle cx="128" cy="210" r="22" fill="#d89b65" stroke="#252525" stroke-width="2"/><text x="128" y="252" text-anchor="middle" class="svg-name">苏明舒</text><circle cx="238" cy="98" r="22" fill="#586a83" stroke="#252525" stroke-width="2"/><text x="238" y="140" text-anchor="middle" class="svg-name">谢临舟</text><circle cx="78" cy="248" r="22" fill="#78a06f" stroke="#252525" stroke-width="2"/><text x="78" y="290" text-anchor="middle" class="svg-name">青枝</text><circle cx="284" cy="124" r="22" fill="#8b7a68" stroke="#252525" stroke-width="2"/><text x="284" y="166" text-anchor="middle" class="svg-name">石墩</text><path d="M 238 98 C 250 78, 262 62, 280 48" fill="none" stroke="#a75858" stroke-width="3" stroke-dasharray="8 7" marker-end="url(#arr)"/></g>
+<text x="520" y="92" class="page-label">导演备注</text>
+<text x="520" y="126" class="page-text">近景 / 谢临舟半侧脸，苏明舒方向虚化在前景</text>
+<text x="520" y="158" class="page-text">极慢推近谢临舟</text>
+<text x="520" y="198" class="page-label">画面动作</text>
+<text x="520" y="232" class="page-text">谢临舟半侧回头，语气像提醒又像挑衅，谢临舟：下次</text><text x="520" y="262" class="page-text">若想放火，记得选个不烫手的火候。</text>
+</g>
+<g transform="translate(54,1468)">
+<rect x="0" y="0" width="960" height="386" rx="10" fill="#fffdf8" stroke="#cfc6ba" stroke-width="2"/>
+<text x="26" y="42" class="page-title">5-20｜温柔危险｜5秒</text>
+<image href="../panels/ep5_panel_5-20.svg" x="26" y="62" width="170" height="302"/>
+<g transform="translate(228,54) scale(0.72)"><defs><marker id="arr" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#356d9b"/></marker></defs><rect x="12" y="12" width="336" height="316" rx="10" fill="#fbfaf7" stroke="#cfc6ba"/><rect x="46" y="42" width="268" height="66" rx="8" fill="#ebe5dc" stroke="#d7c9bb"/><text x="180" y="80" text-anchor="middle" class="svg-muted">御花园回廊纵深 / 外侧暖光 / 内侧冷光</text><line x1="70" y1="120" x2="300" y2="120" stroke="#b9afa3" stroke-width="3" stroke-dasharray="10 8"/><path d="M 130 306 L 86 146 L 214 146 Z" fill="#7aa0c4" opacity=".16" stroke="#356d9b" stroke-width="2"/><line x1="130" y1="306" x2="150" y2="188" stroke="#356d9b" stroke-width="4" marker-end="url(#arr)"/><polygon points="112,320 148,320 130,284" fill="#356d9b"/><text x="130" y="344" text-anchor="middle" class="svg-cam">CAM</text><text x="320" y="330" text-anchor="end" class="svg-muted">苏侧 / FOV</text><circle cx="128" cy="210" r="22" fill="#d89b65" stroke="#252525" stroke-width="2"/><text x="128" y="252" text-anchor="middle" class="svg-name">苏明舒</text><circle cx="238" cy="98" r="22" fill="#586a83" stroke="#252525" stroke-width="2"/><text x="238" y="140" text-anchor="middle" class="svg-name">谢临舟</text><circle cx="78" cy="248" r="22" fill="#78a06f" stroke="#252525" stroke-width="2"/><text x="78" y="290" text-anchor="middle" class="svg-name">青枝</text><circle cx="284" cy="124" r="22" fill="#8b7a68" stroke="#252525" stroke-width="2"/><text x="284" y="166" text-anchor="middle" class="svg-name">石墩</text></g>
+<text x="520" y="92" class="page-label">导演备注</text>
+<text x="520" y="126" class="page-text">近景 / 苏明舒正面平视，谢临舟背影虚化在前景边缘</text>
+<text x="520" y="158" class="page-text">缓慢推近苏明舒温柔笑容</text>
+<text x="520" y="198" class="page-label">画面动作</text>
+<text x="520" y="232" class="page-text">苏明舒笑了，笑得温柔极了，苏明舒：谢大人放心。下</text><text x="520" y="262" class="page-text">次一定让您尝到刚刚好的火候。</text>
+</g>
+</svg>

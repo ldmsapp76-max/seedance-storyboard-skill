@@ -1,131 +1,131 @@
-# Content QA
+# 内容 QA
 
-Use this after generating the storyboard and Seedance prompts. This is a content review, not a formatting check.
+生成分镜和 Seedance 提示词后使用本检查。这是内容检查，不是格式检查。
 
-## Review Method
+## 检查方法
 
-Compare three layers:
+对比三层内容：
 
-1. Source script: what must happen, what must be said, what the audience must understand.
-2. Storyboard: how beats become shots and segment handoffs.
-3. Seedance prompt: what the model is actually asked to generate.
+1. 源剧本：必须发生什么、必须说什么、观众必须理解什么。
+2. 分镜：剧情节拍如何转化为镜头和视频段交接。
+3. Seedance 提示词：模型实际被要求生成什么。
 
-Do not only ask "is the format complete?" Ask "if this is generated exactly, will the story still work?"
+不要只问“格式是否完整”。要问：“如果完全按这个生成，故事还成立吗？”
 
-## Severity
+## 严重程度
 
-Use these labels:
+使用这些标签：
 
-- `P0 必修`: will break plot meaning, continuity, or generation.
-- `P1 应修`: likely to cause confusing visuals, wrong acting, or unstable Seedance output.
-- `P2 可优化`: improves rhythm, clarity, or production polish.
+- `P0 必修`：会破坏剧情意义、连续性或生成。
+- `P1 应修`：很可能造成画面混乱、表演错误或 Seedance 输出不稳定。
+- `P2 可优化`：改善节奏、清晰度或制作质感。
 
-## QA Dimensions
+## QA 维度
 
 ### 1. 剧情忠实度
 
-Check:
+检查：
 
-- All source beats are present and in the right order.
-- Dialogue meaning is preserved; do not invent new motivation unless clearly needed.
-- Important reversals, jokes, reveals, hooks, and emotional turns land visually.
-- Original forbidden screen text, such as `[字幕：半刻钟前]`, is translated into visual treatment rather than generated as captions.
+- 所有源剧本节拍都存在，且顺序正确。
+- 对白含义被保留；除非明确必要，不新增人物动机。
+- 重要反转、笑点、揭示、钩子和情绪转折都能在视觉上落地。
+- 原剧本中不应生成到画面的文字，例如 `[字幕：半刻钟前]`，要转化成视觉处理，而不是作为字幕生成。
 
-Flag:
+标记：
 
-- Missing beat.
-- Added action that changes character intent.
-- Dialogue assigned to the wrong person.
-- A reveal shown too early or too late.
+- 缺少节拍。
+- 增加改变人物意图的动作。
+- 对白分配给了错误人物。
+- 揭示出现过早或过晚。
 
 ### 2. 因果链
 
-Check:
+检查：
 
-- Every key event has a visible cause, process, and result.
-- Props do not change owner, hand, orientation, or state without an action.
-- Physical effects have a source: spray, thrown object, blood mark, broken item, falling object, opened door, screen message.
+- 每个关键事件都有可见的原因、过程和结果。
+- 道具不会在没有动作的情况下改变持有人、手别、朝向或状态。
+- 物理效果有来源：喷射、抛出物、血迹、破碎物、坠落物、开门、屏幕消息。
 
-Flag:
+标记：
 
-- "纸条贴上额头" without showing where it came from.
-- Character suddenly appears in a new position.
-- A prop is open/closed, held/dropped, or visible/missing without explanation.
+- 只写“纸条贴上额头”，没有展示来源。
+- 人物突然出现在新位置。
+- 道具无解释地打开/关闭、被拿起/掉落、可见/消失。
 
 ### 3. 空间和镜头连续性
 
-Check:
+检查：
 
-- Character positions remain stable across segment boundaries.
-- Screen direction, eye lines, and distance relations stay readable.
-- Camera-axis changes are intentional and re-established.
-- Wide or two-shot resets exist after major movement or crowd action.
+- 跨视频段时人物位置保持稳定。
+- 画面方向、视线和距离关系可读。
+- 镜头轴线变化有动机，并且重新建立了空间。
+- 重大移动或群体动作后，有全景或双人镜头重置空间。
 
-Flag:
+标记：
 
-- 人物左右互换.
-- 视线方向不成立.
-- A character is described as both near and far in adjacent shots.
-- The next segment does not start from the previous segment's last state.
+- 人物左右互换。
+- 视线方向不成立。
+- 相邻镜头里同一人物一会儿近、一会儿远，缺少解释。
+- 下一视频段没有从上一视频段尾帧状态开始。
 
 ### 4. 人物行为和表演
 
-Check:
+检查：
 
-- Character behavior matches the script's personality and current emotion.
-- Acting detail is visible: posture, gaze, breath, hand tension, hesitation, smile, anger, shame.
-- Comedy comes from timing, contrast, and reaction, not exaggerated cartoon behavior unless requested.
+- 人物行为符合剧本中的性格和当前情绪。
+- 表演细节可见：姿态、视线、呼吸、手部紧张、犹豫、微笑、愤怒、羞耻。
+- 喜剧来自节奏、反差和反应，而不是未经要求的卡通夸张。
 
-Flag:
+标记：
 
-- A clever character acts stupid only to serve a shot.
-- A villain becomes too subtle or too exaggerated compared with the beat.
-- Emotional transition is too abrupt.
+- 聪明人物为了服务镜头突然变蠢。
+- 反派相对节拍过于隐晦或过度夸张。
+- 情绪转变过于突兀。
 
 ### 5. Seedance 可生成性
 
-Check:
+检查：
 
-- Each segment has one clear micro-beat.
-- No segment asks for too many simultaneous actions.
-- Complex mechanisms are split into source, trigger, movement, result, reaction.
-- Prompt wording avoids ambiguity that could cause swapped characters, extra people, changed wardrobe, or wrong prop text.
-- Dialogue subtitles are suppressed, but specified physical prop text remains allowed.
+- 每个视频段只有一个清楚的微节拍。
+- 没有让一个视频段同时完成太多动作。
+- 复杂机关拆成来源、触发、运动、结果、反应。
+- 提示词避免歧义，降低人物互换、额外人物、服装变化、道具文字错误等风险。
+- 禁止对白字幕，但允许指定的实体道具文字。
 
-Flag:
+标记：
 
-- Crowd, mechanism, dialogue, camera move, and prop change all packed into one short shot.
-- Prompt contains abstract emotion without visible action.
-- The model may create subtitles because dialogue is written too prominently without the no-subtitle rule.
+- 人群、机关、对白、运镜和道具变化全塞进一个短镜头。
+- 提示词只写抽象情绪，没有可见动作。
+- 对白写得过于突出，却没有禁字幕规则，导致模型可能生成字幕。
 
 ### 6. 节奏和镜头数量
 
-Check:
+检查：
 
-- Shot count fits the beat: usually 3-4 shots per 15-second Seedance segment.
-- Inserts are short and plot-relevant.
-- Emotional hooks have enough hold time.
-- Action scenes include geography resets.
+- 镜头数量符合节拍：通常每个 15 秒 Seedance 视频段 3-4 个镜头。
+- 插入特写短且与剧情有关。
+- 情绪钩子有足够停顿。
+- 动作戏包含地理关系重置。
 
-Flag:
+标记：
 
-- Too many cuts for a dialogue beat.
-- Too few shots for a complex mechanism.
-- A hook is rushed before the audience can notice it.
+- 对白节拍剪得太碎。
+- 复杂机关镜头太少。
+- 观众还没注意到钩子就匆匆结束。
 
-## Required QA Output
+## 必须输出的 QA
 
-After generation, include a compact `Content QA` section:
+生成后包含紧凑的 `Content QA` 区块：
 
 | Severity | Issue | Where | Why It Matters | Fix |
 |---|---|---|---|---|
 
-If no serious content issues remain, say:
+如果没有严重内容问题，写：
 
 ```text
 Content QA: 未发现 P0/P1 内容问题；剩余风险为 Seedance 生成时可能产生的表情/群演随机性。
 ```
 
-Do not hide issues by silently fixing them. If you revise during QA, mention the repair under `Repair Notes`.
+不要通过“悄悄修掉”来隐藏问题。如果你在 QA 过程中做了修订，请在 `Repair Notes` 中说明。
 
-Also verify the final `Production Stats` table: video count, total duration, and shot count must match the generated segment list.
+同时检查最终 `Production Stats` 表：视频数量、总时长、镜头数量必须与生成的视频段列表一致。

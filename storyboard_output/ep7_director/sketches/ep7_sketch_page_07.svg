@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" role="img">
+<defs><marker id="arr" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#356d9b"/></marker>
+<style>.page-title{font:800 26px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#1f1f1f}.page-label{font:800 21px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#8a6538}.page-text{font:600 20px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#2b2b2b}.svg-name{font:700 14px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#222}.svg-muted{font:700 13px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#6d655d}.svg-cam{font:900 15px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#356d9b}</style></defs>
+<rect width="1080" height="1920" fill="#f3eee6"/>
+<text x="54" y="54" class="page-title">第7集导演分镜页 7 / 8</text>
+<g transform="translate(54,94)">
+<rect x="0" y="0" width="960" height="386" rx="10" fill="#fffdf8" stroke="#cfc6ba" stroke-width="2"/>
+<text x="26" y="42" class="page-title">7-25｜试试退婚｜5秒</text>
+<image href="../panels/ep7_panel_7-25.svg" x="26" y="62" width="170" height="302"/>
+<g transform="translate(228,54) scale(0.72)"><defs><marker id="arr" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#356d9b"/></marker></defs><rect x="12" y="12" width="336" height="316" rx="10" fill="#fbfaf7" stroke="#cfc6ba"/><rect x="46" y="42" width="268" height="66" rx="8" fill="#efe8dd" stroke="#d7c9bb"/><text x="180" y="80" text-anchor="middle" class="svg-muted">苏府正厅 / 主轴线</text><path d="M 184 306 L 114 90 L 242 90 Z" fill="#7aa0c4" opacity=".16" stroke="#356d9b" stroke-width="2"/><line x1="184" y1="306" x2="178" y2="132" stroke="#356d9b" stroke-width="4" marker-end="url(#arr)"/><polygon points="166,320 202,320 184,284" fill="#356d9b"/><text x="184" y="344" text-anchor="middle" class="svg-cam">CAM</text><text x="320" y="318" text-anchor="end" class="svg-muted">谢临舟正面 / FOV</text><circle cx="176" cy="130" r="22" fill="#586a83" stroke="#252525" stroke-width="2"/><text x="176" y="172" text-anchor="middle" class="svg-name">谢临舟</text><circle cx="246" cy="155" r="22" fill="#8b7a68" stroke="#252525" stroke-width="2"/><text x="246" y="197" text-anchor="middle" class="svg-name">石墩</text><circle cx="95" cy="205" r="22" fill="#d89b65" stroke="#252525" stroke-width="2"/><text x="95" y="247" text-anchor="middle" class="svg-name">苏明舒</text></g>
+<text x="520" y="92" class="page-label">导演备注</text>
+<text x="520" y="126" class="page-text">中景 / 谢临舟站起身，石墩在侧后收礼单</text>
+<text x="520" y="158" class="page-text">稳定器轻跟谢临舟起身动作</text>
+<text x="520" y="198" class="page-label">画面动作</text>
+<text x="520" y="232" class="page-text">谢临舟站起身，语气平静，谢临舟（对苏明舒讲话，情</text><text x="520" y="262" class="page-text">绪：挑衅）：苏小姐若想退婚，可以试试。</text>
+</g><g transform="translate(54,552)">
+<rect x="0" y="0" width="960" height="386" rx="10" fill="#fffdf8" stroke="#cfc6ba" stroke-width="2"/>
+<text x="26" y="42" class="page-title">7-26｜小玩意儿最多｜6秒</text>
+<image href="../panels/ep7_panel_7-26.svg" x="26" y="62" width="170" height="302"/>
+<g transform="translate(228,54) scale(0.72)"><defs><marker id="arr" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#356d9b"/></marker></defs><rect x="12" y="12" width="336" height="316" rx="10" fill="#fbfaf7" stroke="#cfc6ba"/><rect x="46" y="42" width="268" height="66" rx="8" fill="#efe8dd" stroke="#d7c9bb"/><text x="180" y="80" text-anchor="middle" class="svg-muted">苏府正厅 / 主轴线</text><path d="M 190 306 L 110 142 L 238 142 Z" fill="#7aa0c4" opacity=".16" stroke="#356d9b" stroke-width="2"/><line x1="190" y1="306" x2="174" y2="184" stroke="#356d9b" stroke-width="4" marker-end="url(#arr)"/><polygon points="172,320 208,320 190,284" fill="#356d9b"/><text x="190" y="344" text-anchor="middle" class="svg-cam">CAM</text><text x="320" y="318" text-anchor="end" class="svg-muted">苏明舒反应 / FOV</text><circle cx="172" cy="185" r="22" fill="#d89b65" stroke="#252525" stroke-width="2"/><text x="172" y="227" text-anchor="middle" class="svg-name">苏明舒</text><circle cx="250" cy="220" r="22" fill="#78a06f" stroke="#252525" stroke-width="2"/><text x="250" y="262" text-anchor="middle" class="svg-name">青枝</text><circle cx="82" cy="132" r="22" fill="#586a83" stroke="#252525" stroke-width="2"/><text x="82" y="174" text-anchor="middle" class="svg-name">谢临舟</text></g>
+<text x="520" y="92" class="page-label">导演备注</text>
+<text x="520" y="126" class="page-text">近景 / 苏明舒正面，笑容温软但眼神带锋</text>
+<text x="520" y="158" class="page-text">缓慢推近苏明舒笑容</text>
+<text x="520" y="198" class="page-label">画面动作</text>
+<text x="520" y="232" class="page-text">苏明舒笑得温软，苏明舒（对谢临舟讲话，情绪：温软</text><text x="520" y="262" class="page-text">带锋）：谢大人放心。我这人别的不多，小玩意儿最多</text><text x="520" y="292" class="page-text">。</text>
+</g><g transform="translate(54,1010)">
+<rect x="0" y="0" width="960" height="386" rx="10" fill="#fffdf8" stroke="#cfc6ba" stroke-width="2"/>
+<text x="26" y="42" class="page-title">7-27｜我会拆｜4秒</text>
+<image href="../panels/ep7_panel_7-27.svg" x="26" y="62" width="170" height="302"/>
+<g transform="translate(228,54) scale(0.72)"><defs><marker id="arr" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#356d9b"/></marker></defs><rect x="12" y="12" width="336" height="316" rx="10" fill="#fbfaf7" stroke="#cfc6ba"/><rect x="46" y="42" width="268" height="66" rx="8" fill="#efe8dd" stroke="#d7c9bb"/><text x="180" y="80" text-anchor="middle" class="svg-muted">苏府正厅 / 主轴线</text><path d="M 184 306 L 114 90 L 242 90 Z" fill="#7aa0c4" opacity=".16" stroke="#356d9b" stroke-width="2"/><line x1="184" y1="306" x2="178" y2="132" stroke="#356d9b" stroke-width="4" marker-end="url(#arr)"/><polygon points="166,320 202,320 184,284" fill="#356d9b"/><text x="184" y="344" text-anchor="middle" class="svg-cam">CAM</text><text x="320" y="318" text-anchor="end" class="svg-muted">谢临舟正面 / FOV</text><circle cx="176" cy="130" r="22" fill="#586a83" stroke="#252525" stroke-width="2"/><text x="176" y="172" text-anchor="middle" class="svg-name">谢临舟</text><circle cx="246" cy="155" r="22" fill="#8b7a68" stroke="#252525" stroke-width="2"/><text x="246" y="197" text-anchor="middle" class="svg-name">石墩</text><circle cx="95" cy="205" r="22" fill="#d89b65" stroke="#252525" stroke-width="2"/><text x="95" y="247" text-anchor="middle" class="svg-name">苏明舒</text></g>
+<text x="520" y="92" class="page-label">导演备注</text>
+<text x="520" y="126" class="page-text">近景 / 谢临舟正面，苏明舒虚化在前景</text>
+<text x="520" y="158" class="page-text">极慢推近谢临舟淡定表情</text>
+<text x="520" y="198" class="page-label">画面动作</text>
+<text x="520" y="232" class="page-text">谢临舟看着她，谢临舟（对苏明舒讲话，情绪：从容）</text><text x="520" y="262" class="page-text">：正好，我会拆。</text>
+</g><g transform="translate(54,1468)">
+<rect x="0" y="0" width="960" height="386" rx="10" fill="#fffdf8" stroke="#cfc6ba" stroke-width="2"/>
+<text x="26" y="42" class="page-title">7-28｜拆不拆得动｜6秒</text>
+<image href="../panels/ep7_panel_7-28.svg" x="26" y="62" width="170" height="302"/>
+<g transform="translate(228,54) scale(0.72)"><defs><marker id="arr" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#356d9b"/></marker></defs><rect x="12" y="12" width="336" height="316" rx="10" fill="#fbfaf7" stroke="#cfc6ba"/><rect x="46" y="42" width="268" height="66" rx="8" fill="#efe8dd" stroke="#d7c9bb"/><text x="180" y="80" text-anchor="middle" class="svg-muted">苏府正厅 / 主轴线</text><path d="M 190 306 L 110 142 L 238 142 Z" fill="#7aa0c4" opacity=".16" stroke="#356d9b" stroke-width="2"/><line x1="190" y1="306" x2="174" y2="184" stroke="#356d9b" stroke-width="4" marker-end="url(#arr)"/><polygon points="172,320 208,320 190,284" fill="#356d9b"/><text x="190" y="344" text-anchor="middle" class="svg-cam">CAM</text><text x="320" y="318" text-anchor="end" class="svg-muted">苏明舒反应 / FOV</text><circle cx="172" cy="185" r="22" fill="#d89b65" stroke="#252525" stroke-width="2"/><text x="172" y="227" text-anchor="middle" class="svg-name">苏明舒</text><circle cx="250" cy="220" r="22" fill="#78a06f" stroke="#252525" stroke-width="2"/><text x="250" y="262" text-anchor="middle" class="svg-name">青枝</text><circle cx="82" cy="132" r="22" fill="#586a83" stroke="#252525" stroke-width="2"/><text x="82" y="174" text-anchor="middle" class="svg-name">谢临舟</text></g>
+<text x="520" y="92" class="page-label">导演备注</text>
+<text x="520" y="126" class="page-text">特写 / 苏明舒眼神特写，笑意中带狡黠</text>
+<text x="520" y="158" class="page-text">极慢推近到眼神</text>
+<text x="520" y="198" class="page-label">画面动作</text>
+<text x="520" y="232" class="page-text">苏明舒眼底闪过狡黠，苏明舒（对谢临舟讲话，情绪：</text><text x="520" y="262" class="page-text">挑衅）：那就看谢大人，拆不拆得动了。</text>
+</g>
+</svg>

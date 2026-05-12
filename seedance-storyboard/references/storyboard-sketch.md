@@ -1,131 +1,131 @@
-# Storyboard Sketch Briefs
+# 分镜草图 Brief
 
-Use this reference only when the user asks for storyboard sketches, rough panels, visual boards, thumbnails, keyframes, or sketch prompts after the Seedance storyboard/prompt stage.
+只有当用户要求分镜草图、粗略面板、视觉板、缩略图、关键帧，或在 Seedance 分镜/提示词阶段后要求草图 prompt 时，才使用本参考。
 
-## Purpose
+## 目的
 
-Storyboard sketches are a visual continuity check, not a new rewrite of the scene. Generate them from the locked `Shot List`, `Seedance 2.0 Segments`, and `Continuity Bible`.
+分镜草图是视觉连续性检查，不是重新改写场景。它必须从已锁定的 `Shot List`、`Seedance 2.0 Segments` 和 `Continuity Bible` 中生成。
 
-Use sketches to verify:
+用草图验证：
 
-- Character placement and screen direction.
-- Prop ownership, hand, orientation, and state.
-- Camera size, angle, and movement intent.
-- Important emotional beats and reveals.
-- Segment first-frame and last-frame continuity.
+- 人物站位和画面方向。
+- 道具归属、手别、朝向和状态。
+- 景别、机位和运镜意图。
+- 重要情绪节拍和揭示。
+- 视频段首帧/尾帧的连续性。
 
-## Selection Rules
+## 选择规则
 
-Choose the sketch scope based on the user's request:
+根据用户要求选择草图范围：
 
-- `segment-first-frame`: default when the user says "生成分镜草图" without specifying scope; one sketch per Seedance segment opening frame.
-- `key-panels`: use for quick review; sketch only reveals, reversals, prop mechanisms, entrances/exits, and emotional hooks.
-- `all-shots`: use when the user needs a complete visual board; one panel per shot in the shot list.
-- `handoff-pairs`: use when continuity is risky; sketch each segment's last frame and the next segment's first frame as paired panels.
+- `segment-first-frame`：用户只说“生成分镜草图”且没有指定范围时的默认值；每个 Seedance 视频段开场帧一张。
+- `key-panels`：快速审阅用；只画揭示、反转、道具机关、进出场和情绪钩子。
+- `all-shots`：用户需要完整视觉板时使用；镜头表里每个镜头一张。
+- `handoff-pairs`：连续性风险较高时使用；画每个视频段尾帧和下一段首帧的对照面板。
 
-If the user will generate images next, prefer fewer, higher-value panels first: segment first frames plus key reveal/action panels.
+如果用户接下来会生成图片，优先少量高价值面板：视频段首帧加关键揭示/动作面板。
 
-## Director Sketch Sheet Format
+## 导演草图表格式
 
-Use this format when the user asks for a picture-form director storyboard, 分镜图, 草图表, or "分镜草图在前，后面是文字描述，要有人物站位图".
+当用户要求图片形式导演分镜、分镜图、草图表，或“分镜草图在前，后面是文字描述，要有人物站位图”时使用。
 
-Default image format:
+默认图片格式：
 
-- Aspect ratio: `9:16 vertical`.
-- Resolution target: `4K`, approximately `2160x3840` or higher-quality 9:16.
-- Layout: one vertical sheet with generous margins.
-- Module scope: one module per Seedance video segment unless the user asks for all shots.
-- Module order: follow video segment order.
-- Visual hierarchy in each module:
-  1. Large rough storyboard sketch first.
-  2. Overhead character blocking diagram second.
-  3. Concise production notes last.
-- Style: rough director storyboard, grayscale pencil/ink with light gray wash; use restrained accent color only for critical props or effects if useful.
+- 画幅：`9:16 vertical`。
+- 目标分辨率：`4K`，约 `2160x3840` 或更高质量的 9:16。
+- 版式：一张竖向长图，留足边距。
+- 模块范围：默认每个 Seedance 视频段一个模块，除非用户要求全部镜头。
+- 模块顺序：按视频段顺序。
+- 每个模块的视觉层级：
+  1. 先放大的粗略分镜草图。
+  2. 再放俯视人物站位图。
+  3. 最后放简短制作说明。
+- 风格：粗略导演分镜，灰度铅笔/墨线，可用浅灰调子；必要时只用克制强调色标出关键道具或效果。
 
-Each module should include:
+每个模块应包含：
 
-- Segment title: `场次/视频编号/时长/镜头数`.
-- Sketch panel: main first-frame or key action of the segment.
-- Blocking diagram: top-down circles/arrows with Chinese labels for characters, props, screen direction, path, distance, and important gaze/action arrows.
-- Camera placement in the blocking diagram is mandatory: show camera position, camera direction, and approximate field of view or framing angle. Use labels such as `CAM`, `镜头方向`, `视角范围`, `推/拉/跟/摇` when movement matters.
-- Notes: 2-4 short Chinese notes covering shot rhythm, continuity risk, prop state, and no-subtitle rule when relevant.
+- 视频段标题：`场次/视频编号/时长/镜头数`。
+- 草图面板：该段主要首帧或关键动作。
+- 站位图：俯视圆点/箭头，用中文标签标人物、道具、画面方向、路线、距离、关键视线/动作箭头。
+- 站位图必须包含镜头位置：显示 camera 位置、镜头方向、近似视角范围或构图角度。运动重要时使用 `CAM`、`镜头方向`、`视角范围`、`推/拉/跟/摇` 等标签。
+- 说明：2-4 条简短中文说明，覆盖镜头节奏、连续性风险、道具状态和必要的禁字幕规则。
 
-For an 8-segment episode sheet, use 8 large modules stacked vertically only for overview. For shot-level first-frame booklets, use fewer modules per sheet, usually 4-6 modules per 4K page. Do not force 9-10 shot modules into one 9:16 sheet when Chinese labels or notes must be readable.
+8 段视频的单集草图表可以用 8 个大模块竖向堆叠作为总览。镜头级首帧册页通常每张 4K 页面放 4-6 个模块。不要为了把 9-10 个镜头模块塞进一张 9:16 图而牺牲中文标签或说明可读性。
 
-## Text Clarity And Layout Stability
+## 文字清晰度和版式稳定
 
-Image generation is unreliable for dense Chinese text and exact layout. Treat the generated image as a visual storyboard, not as the final typeset document.
+图像生成对密集中文和精确版式不可靠。把生成图当作视觉分镜，而不是最终排版文档。
 
-Rules:
+规则：
 
-- Prefer fewer, larger modules over many cramped modules.
-- Keep in-image text extremely short: module title, character labels, `CAM`, direction arrows, and 1-2 note fragments.
-- Avoid full sentences inside generated images when clarity matters.
-- Do not ask the image model to render long production notes, long dialogue, tables, or exact shot lists.
-- Keep module layout identical across pages: same title area, same sketch area, same blocking diagram area, same notes area.
-- Use the same label vocabulary across pages: `CAM`, `镜头方向`, `FOV`, `苏明舒`, `顾灵薇`, `青枝`, `沈昭昭`, `宫人`, `贵女`, `天机匣`.
-- If readable Chinese text is important, generate the storyboard art with minimal labels or blank note boxes, then add exact Chinese titles/notes using deterministic layout tooling such as HTML/SVG/PPT/image editing. Do not rely on the image model for final typography.
-- If a generated sheet has inconsistent layout or blurry labels, split it into more pages before increasing resolution again.
+- 模块宁可少而大，不要多而挤。
+- 图中只能放极短文字：模块标题、人物标签、`CAM`、方向箭头、1-2 个说明碎片。
+- 清晰度重要时，避免在生成图中放完整句子。
+- 不要要求图像模型渲染长制作说明、长对白、表格或精确镜头表。
+- 各页模块版式保持一致：标题区、草图区、站位图区、说明区都固定。
+- 标签词汇保持一致：`CAM`、`镜头方向`、`FOV`、`苏明舒`、`顾灵薇`、`青枝`、`沈昭昭`、`宫人`、`贵女`、`天机匣`。
+- 如果中文可读性重要，先让图像模型生成少量标签或空白说明框，再用 HTML/SVG/PPT/图像编辑叠加准确中文标题和说明。不要依赖图像模型做最终文字排版。
+- 如果生成图版式不一致或标签模糊，先拆成更多页面，而不是继续提高单图分辨率。
 
-## Deterministic SVG/HTML Workflow
+## 确定性 SVG/HTML 工作流
 
-### Image-Model Sketch Plus HTML/SVG Layout
+### 图像模型草图 + HTML/SVG 排版
 
-Use this pattern when the user asks for Image 2.0 sketches together with readable director notes, shot text, or character-position diagrams.
+当用户要求 Image 2.0 草图，同时需要可读导演说明、镜头文本或人物站位图时，使用这个模式。
 
-- Let the image model generate only the rough visual storyboard art. Do not ask it to render long Chinese notes, dialogue, shot IDs, tables, CAM labels, or relationship diagrams.
-- Put all production text, shot IDs, dialogue/audio notes, `CAM`, `FOV`, arrows, character labels, and top-down blocking diagrams in deterministic HTML/SVG.
-- For a desktop review page, prefer a wide working layout over a narrow phone-sheet layout. Use nearly full browser width, keep the sketch column large, and place notes plus the SVG blocking diagram beside it.
-- If the user asks for every shot, split image generation into small storyboard sheets, usually 4-5 panels per generated image. Do not force all shots into one generated image.
-- Avoid background music fields in the generated director page unless the user explicitly asks for music. For Seedance-oriented outputs, keep audio to character voice, environment sound, and action sound effects.
+- 让图像模型只生成粗略视觉分镜画面。不要要求它渲染长中文说明、对白、镜头 ID、表格、CAM 标签或关系图。
+- 所有制作文字、镜头 ID、对白/音频说明、`CAM`、`FOV`、箭头、人物标签、俯视站位图都放到确定性 HTML/SVG 中。
+- 桌面审阅页优先用宽工作布局，不用窄手机长图；草图列保持较大，说明和 SVG 站位图放在旁边。
+- 如果用户要求每个镜头都有图，把图像生成拆成小型分镜表，通常每张生成图 4-5 格。不要把全部镜头硬塞进一张生成图。
+- 除非用户明确要求音乐，生成的导演页不要出现背景音乐字段。Seedance 导向输出中，音频只保留角色语音、环境音和动作音效。
 
-### Generated Sheet Cropping Rules
+### 生成图切片规则
 
-When a generated storyboard image contains multiple stacked panels, do not rely on CSS cropping from the full sheet in the final HTML.
+当生成的分镜图包含多个竖向面板时，最终 HTML 不要依赖 CSS 从整图裁切。
 
-Preferred workflow:
+推荐流程：
 
-1. Save the original generated sheet under a `sketches/` directory.
-2. Slice it into one standalone image per shot or panel under a `panels/` directory.
-3. Reference the standalone panel images from HTML. This avoids browser zoom, aspect-ratio, and percentage-offset errors.
-4. Keep a small panel-check HTML page when useful so the user can inspect all slices quickly.
+1. 将原始生成图保存到 `sketches/` 目录。
+2. 将其切成每个镜头或每个面板的独立图片，放到 `panels/` 目录。
+3. HTML 中引用独立面板图片，避免浏览器缩放、画幅比例、百分比偏移导致错误。
+4. 必要时保留一个 panel-check HTML 页面，方便用户快速检查全部切片。
 
-Cropping cautions:
+切片注意：
 
-- Do not assume all generated panels are equal height. Image models often create uneven panel heights even when the prompt asks for equal stacked panels.
-- Find the real horizontal divider positions by inspection or image analysis, then crop with those coordinates.
-- For each page, record the panel split coordinates if manual correction was needed.
-- Validate the final HTML references panel images directly, not the full generated sheet. There should be one panel reference per shot.
+- 不要假设生成图的所有面板高度相等。即使 prompt 要求等高，图像模型也常会生成不均匀面板。
+- 通过检查或图像分析找出真实横向分隔线，再按这些坐标裁切。
+- 如果手动校正过，每页记录面板切分坐标。
+- 验证最终 HTML 直接引用面板图片，而不是整张生成图。每个镜头应有一个独立面板引用。
 
-Use this workflow when the user asks for clear text, consistent layout, readable Chinese labels, or "先生成草图/站位图，再叠加真实文字".
+当用户要求清晰文字、一致版式、可读中文标签，或“先生成草图/站位图，再叠加真实文字”时，使用这个工作流：
 
-1. Generate or draw the visual parts separately: storyboard sketch area, top-down blocking diagram, camera position, camera direction, and FOV.
-2. Compose the final page with deterministic tooling, preferably SVG or HTML/CSS rendered by a browser.
-3. Put all titles, shot IDs, time ranges, camera details, notes, character labels, `CAM`, `FOV`, and direction labels as real text, not image-model text.
-4. Export both source and image:
-   - Source: `.svg` or `.html` for later editing.
-   - Delivery: `.png` at 4K 9:16, usually `2160x3840`.
-5. Keep one Seedance video per page for shot-level first-frame booklets, usually 4-5 shot modules. This is more readable than 9-10 modules per page.
+1. 单独生成或绘制视觉部分：分镜草图区、俯视站位图、镜头位置、镜头方向和 FOV。
+2. 使用确定性工具合成最终页面，优先 SVG 或 HTML/CSS 浏览器渲染。
+3. 所有标题、镜头 ID、时间范围、摄影细节、说明、人物标签、`CAM`、`FOV`、方向标签都使用真实文字，而不是图像模型文字。
+4. 同时导出源文件和图片：
+   - 源文件：`.svg` 或 `.html`，方便后续编辑。
+   - 交付图：4K 9:16 `.png`，通常 `2160x3840`。
+5. 镜头级首帧册页通常每页一个 Seedance 视频段，每页 4-5 个镜头模块。这样比一页放 9-10 个模块更可读。
 
-Page structure for shot-level booklets:
+镜头级册页结构：
 
 ```text
-Title bar: episode/page/video segment
-Each shot module:
-  Header: shot ID | time range | camera details | short beat title
-  Left: first-frame sketch
-  Right: top-down blocking + CAM + direction arrow + FOV cone
-  Bottom: real text notes, 1-2 lines
+标题栏：集数/页码/视频段
+每个镜头模块：
+  Header：shot ID | time range | camera details | short beat title
+  Left：first-frame sketch
+  Right：top-down blocking + CAM + direction arrow + FOV cone
+  Bottom：real text notes, 1-2 lines
 ```
 
-Validation:
+验证：
 
-- Text must remain selectable/editable in the SVG/HTML source.
-- Camera diagram must include `CAM`, direction arrow, and FOV.
-- Notes must be real text and consistent across pages.
-- Exported PNG should be checked at full size before delivery.
+- SVG/HTML 源文件中的文字必须可选中、可编辑。
+- 镜头图必须包含 `CAM`、方向箭头和 FOV。
+- 说明必须是真实文字，并且各页一致。
+- 导出的 PNG 交付前应按全尺寸检查。
 
-Recommended image-generation prompt structure:
+推荐图像生成提示词结构：
 
 ```text
 Generate an ultra-high-resolution 4K vertical 9:16 director storyboard sheet. [Episode title].
@@ -134,80 +134,80 @@ Style: black-and-white pencil storyboard with light gray wash, clear ancient Chi
 For each module: [title], [sketch action], [blocking labels], [notes].
 ```
 
-Do not ask the image model to render long body text. Keep module notes short and high contrast. If the sheet becomes crowded, split it into multiple 4K sheets instead of shrinking text.
+不要要求图像模型渲染长正文。模块说明要短、对比清晰。如果画面拥挤，拆成多张 4K 图，不要缩小文字。
 
-## Brief Format
+## Brief 格式
 
-Use this table unless the user requests another format:
+除非用户要求其他格式，使用这个表：
 
 | Sketch ID | Source | Panel Type | Composition | Characters | Props | Camera | Continuity Purpose | Image Prompt |
 |---|---|---|---|---|---|---|---|---|
 
-Field guidance:
+字段说明：
 
-- `Sketch ID`: stable ID, such as `SK-01`, `SK-02`.
-- `Source`: shot ID or segment ID, such as `SHOT-03` or `SEG-02 first frame`.
-- `Panel Type`: `首帧`, `尾帧`, `关键动作`, `反应`, `道具特写`, `空间重置`, or `交接对照`.
-- `Composition`: screen-left/center/screen-right plus foreground/midground/background.
-- `Characters`: appearance, wardrobe, posture, gaze, emotional state, and relative distance.
-- `Props`: owner, hand, position, orientation, readable diegetic text if needed, and state.
-- `Camera`: shot size, camera angle, lens/focal length, depth of field, and motion intention.
-- `Continuity Purpose`: what this panel proves or protects.
-- `Image Prompt`: concise prompt for a rough storyboard image, not a polished final still.
+- `Sketch ID`：稳定 ID，例如 `SK-01`、`SK-02`。
+- `Source`：镜头 ID 或视频段 ID，例如 `SHOT-03` 或 `SEG-02 first frame`。
+- `Panel Type`：`首帧`、`尾帧`、`关键动作`、`反应`、`道具特写`、`空间重置` 或 `交接对照`。
+- `Composition`：screen-left/center/screen-right 加 foreground/midground/background。
+- `Characters`：外貌、服装、姿态、视线、情绪状态、相对距离。
+- `Props`：归属、手别、位置、朝向、必要的剧情实物文字、状态。
+- `Camera`：景别、机位角度、焦距、景深和运镜意图。
+- `Continuity Purpose`：这张面板证明或保护什么。
+- `Image Prompt`：用于粗略分镜图的简洁 prompt，不是精修剧照 prompt。
 
-## Image Prompt Rules
+## 图像 Prompt 规则
 
-When writing sketch prompts:
+写草图 prompt 时：
 
-- Preserve the exact blocking, wardrobe, props, and camera from the source shot.
-- Ask for rough storyboard sketch, grayscale line art, loose production thumbnail, or simple tonal storyboard unless the user requests polished concept art.
-- Keep the same aspect ratio as the final video plan, usually `9:16 vertical`.
-- Include only visible visual facts; do not include hidden motivation or plot explanation.
-- Avoid adding decorative style language that could change the scene design.
-- Do not introduce subtitles, speech bubbles, labels, UI overlays, title cards, or explanatory text.
-- Allow story-world prop text only when it physically exists in the shot and is already approved by the Seedance prompt.
-- When a prop opening, blade direction, spray path, thrown object, or mechanism repeatedly renders backwards, switch to a reverse-camera or character-POV setup. Put the camera on the affected character's side so "toward camera" means "toward the affected character." State this explicitly in the prompt.
+- 保留源镜头的准确走位、服装、道具和机位。
+- 除非用户要求精修概念图，否则要求 rough storyboard sketch、grayscale line art、loose production thumbnail 或 simple tonal storyboard。
+- 保持最终视频计划的画幅，通常是 `9:16 vertical`。
+- 只包含可见视觉事实，不写隐藏动机或剧情解释。
+- 避免加入会改变场景设计的装饰性风格词。
+- 不引入字幕、对白气泡、标签、UI 叠加、标题卡或解释文字。
+- 只有当 Seedance 提示词已批准且文字真实存在于画面道具上时，才允许剧情世界内的道具文字。
+- 如果道具开口、刀刃方向、喷射路径、抛出物或机关经常生成反向，改用反向机位或角色 POV。把镜头放在受影响角色一侧，让“朝向镜头”等于“朝向受影响角色”。在 prompt 中明确说明这一点。
 
-Recommended prompt shape:
+推荐 prompt 形状：
 
 ```text
 Rough grayscale storyboard sketch, 9:16 vertical frame. [Shot size and camera angle]. [Character positions using screen-left/center/screen-right and depth]. [Main action or held pose]. [Important prop state]. [Lighting/mood]. No subtitles, no speech bubbles, no title text, no UI overlays, no watermark.
 ```
 
-## Reverse-Camera Fix
+## 反向机位修正
 
-Use this fix when the image model keeps reversing a critical direction even after ordinary wording changes.
+当图像模型在普通措辞后仍反复生成错误方向时，使用这个修正。
 
-Examples:
+例子：
 
-- A box opening must face the victim, but the model keeps opening it toward the audience.
-- A trap must spray toward a face, but the model points the mechanism outward.
-- A blade, arrow, thrown paper, powder burst, or gaze direction points to the wrong person.
+- 盒口必须朝向受害者，但模型总是让盒口朝向观众。
+- 陷阱必须喷向脸，但模型把机关指向外侧。
+- 刀刃、箭、飞纸、粉末喷射或视线方向指向了错误人物。
 
-Procedure:
+流程：
 
-1. Move the camera onto the affected character's side: over-the-shoulder, shoulder-rear, or near-POV.
-2. State that the viewer is standing on that character's side.
-3. Define the direction through camera logic: `盒口朝镜头 = 盒口朝顾灵薇`, because the camera is behind Gu Lingwei.
-4. Place the other character in the distant background/opposite side to prove the prop is not aimed at them.
-5. Avoid front-facing display shots when the prop direction matters more than seeing the full object.
+1. 把镜头移动到受影响角色一侧：过肩、肩后或近 POV。
+2. 说明观众站在该角色一侧。
+3. 用镜头逻辑定义方向：`盒口朝镜头 = 盒口朝顾灵薇`，因为镜头在顾灵薇身后。
+4. 把另一个角色放在远处背景或对侧，以证明道具不是对准他们。
+5. 当道具方向比完整展示物体更重要时，避免正面展示式镜头。
 
-For the `SK-06` style mechanism-box beat, prefer:
+对于 `SK-06` 类型的机关盒节拍，优先使用：
 
 ```text
 Camera is behind Gu Lingwei's shoulder, almost Gu Lingwei POV. Viewer stands on Gu Lingwei's side of the box. The box opening faces the viewer, therefore it faces Gu Lingwei. Su Mingshu stands opposite in the background, holding chestnuts and not touching the box. The hidden mechanism points from the box interior back toward Gu Lingwei/camera, not toward Su Mingshu.
 ```
 
-## Sketch QA
+## 草图 QA
 
-Before delivering sketch briefs, check:
+交付草图 brief 前检查：
 
-- Each sketch source exists in the shot list or Seedance segment list.
-- Sketches do not change character side, distance, wardrobe, or prop ownership.
-- Key props are visible when they are the reason for the panel.
-- Each blocking diagram includes camera position, camera direction, and approximate field of view; if the shot moves, the diagram shows movement direction.
-- For directional props or mechanisms, the camera-side logic proves who the prop faces or targets.
-- The panel count matches the declared scope.
-- Image prompts avoid subtitles and non-diegetic text.
+- 每张草图的来源都存在于镜头表或 Seedance 视频段列表中。
+- 草图没有改变人物画面侧位、距离、服装或道具归属。
+- 如果道具是该面板存在的原因，关键道具必须可见。
+- 每张站位图都包含镜头位置、镜头方向和近似 FOV；如果镜头运动，图中要显示运动方向。
+- 对方向性道具或机关，镜头侧逻辑能证明道具朝向或目标是谁。
+- 面板数量与声明范围一致。
+- 图像 prompt 避免字幕和非剧情文字。
 
-If a sketch exposes a continuity problem, repair the shot/segment first, then update the sketch brief.
+如果草图暴露连续性问题，先修复镜头/视频段，再更新草图 brief。
