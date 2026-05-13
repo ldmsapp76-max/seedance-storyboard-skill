@@ -211,3 +211,36 @@ Camera is behind Gu Lingwei's shoulder, almost Gu Lingwei POV. Viewer stands on 
 - 图像 prompt 避免字幕和非剧情文字。
 
 如果草图暴露连续性问题，先修复镜头/视频段，再更新草图 brief。
+## 固定交付格式：视频分组草图 -> 单镜头切割 -> 总表
+
+当用户要求“按之前的方式”“固定当前输出格式”“导演分镜草图 + 站位图 + 机位图”，或没有额外指定版式时，严格使用以下交付流程：
+
+1. 先按 Seedance 视频编号生成分组分镜图：每条视频一张 Image 2.0 分组草图，图内包含该视频下的多个镜头面板。通常每张 2-5 格，避免把整集所有镜头塞进一张生成图。
+2. 再把分组草图切割为每个镜头的独立草图文件，放入 `shots/`。最终 HTML 必须引用独立镜头图，不要依赖 CSS 从整图裁切。
+3. 最后生成样张式导演总表：每个镜头一行，左侧是独立分镜草图，中间是导演分镜表信息，右侧是人物关系位置图 / `CAM` + `FOV` 机位图。
+4. 同步输出以下文件：
+   - `*_director_full_table.html`：可浏览总表。
+   - `*_director_full_table.png`：长图总表。
+   - `*_director_full_table.md`：文字版镜头表。
+   - `shots/`：每个镜头一张切割后的 Image 2.0 草图。
+   - `video_groups/`：按视频编号生成的分组草图原图。
+   - `refs/`：用户提供或本次使用的场景参考图，若有。
+5. 总表顶部必须包含：标题、故事简介、视频/时长/镜头统计、角色锁定、视觉/场景说明。
+6. 每行固定结构：
+   - Header：`镜头号`、`景别`、`拍摄视角`、`运镜`、`时长`。
+   - 左栏：Image 2.0 分镜草图。
+   - 中栏：`设备/镜头`、`站位调度`、`画面 + 台词 + 声音`、`转场`。
+   - 右栏：人物站位图，必须包含角色圆点、关键场景/道具、`CAM`、方向箭头和浅色 `FOV` 扇形。
+7. 除非用户明确要求背景音乐，总表和提示词都不要出现 BGM 字段；音频只写角色语音、环境声和动作音效。
+
+## Image 2.0 分镜草图固定质量提示词
+
+使用 Codex Image 2.0 生成分镜草图时，必须把图像模型限制为“只生成视觉分镜画面”：不要要求模型生成中文说明、对白、镜头号、表格、`CAM` 标签或关系图。所有文字、站位图、机位图都在 HTML/SVG 中确定性绘制。
+
+每条 Image 2.0 草图 prompt 末尾固定追加以下质量约束：
+
+```text
+4K ultra-high-definition, clean and noise-free, no color spots or pixel artifacts, smooth and uniform texture, crisp and complete details, balanced colors, stable composition, sharp and well-defined subject, distinct background layers, natural and complete materials, smooth edges, no blur or distortion, no pixel corruption, no cracks or collapse, no excessive sharpening, normal emoji rendering, pure and flawless image quality.
+```
+
+如果草图是黑白铅笔导演分镜，这段质量约束仍然保留；同时在 prompt 中继续明确 `black-and-white pencil storyboard`、`no text`、`no captions`、`no watermark`、`no speech bubbles`。
