@@ -143,17 +143,19 @@ COLORS = {
 
 def svg_diagram(shot: dict[str, object], idx: int) -> str:
     cx, cy, tx, ty, label = camera_for(idx)
-    out: list[str] = ['<svg class="blocking-svg" viewBox="0 0 360 360" role="img">']
+    out: list[str] = [
+        f'<div class="cam-widget" data-shot="{esc(str(shot["id"]))}">'
+        '<svg class="blocking-svg" viewBox="0 0 360 360" role="img">'
+    ]
     out.append('<rect x="10" y="10" width="340" height="340" rx="16" fill="#fbfaf7" stroke="#c9c1b8"/>')
     out.append('<rect x="60" y="42" width="240" height="62" rx="10" fill="#ece6dc" stroke="#d4c6b6"/>')
     out.append('<text x="180" y="78" text-anchor="middle" class="svg-muted">御花园主台 / 回廊方向</text>')
     out.append(
-        f'<path d="M {cx} {cy} L {tx - 62} {ty - 38} L {tx + 62} {ty - 38} Z" '
+        f'<path class="fov-cone" d="M {cx} {cy} L {tx - 62} {ty - 38} L {tx + 62} {ty - 38} Z" '
         'fill="#7aa0c4" opacity="0.16" stroke="#7aa0c4" stroke-width="2"/>'
     )
-    out.append(f'<line x1="{cx}" y1="{cy}" x2="{tx}" y2="{ty}" stroke="#426d9b" stroke-width="4" marker-end="url(#arrow)"/>')
-    out.append(f'<polygon points="{cx - 20},{cy + 16} {cx + 20},{cy + 16} {cx},{cy - 24}" fill="#426d9b"/>')
-    out.append(f'<text x="{cx}" y="{cy + 42}" text-anchor="middle" class="svg-cam">CAM</text>')
+    out.append(f'<line class="aim-line" x1="{cx}" y1="{cy}" x2="{tx}" y2="{ty}" stroke="#bd6b61" stroke-width="3" stroke-dasharray="8 7" marker-end="url(#arrow-red)"/>')
+    out.append(f'<g class="cam-node draggable" data-role="camera" data-x="{cx}" data-y="{cy}"><polygon points="{cx - 20},{cy + 16} {cx + 20},{cy + 16} {cx},{cy - 24}" fill="#426d9b"/><text x="{cx}" y="{cy + 42}" text-anchor="middle" class="svg-cam">CAM</text></g>')
     out.append(f'<text x="310" y="330" text-anchor="end" class="svg-muted">{esc(label)} / FOV</text>')
     move = str(shot["move"])
     if "推" in move:
@@ -164,11 +166,21 @@ def svg_diagram(shot: dict[str, object], idx: int) -> str:
     if "横移" in move or "跟" in move:
         out.append(f'<path d="M {tx - 62} {ty + 30} L {tx + 62} {ty + 30}" fill="none" stroke="#bd6b61" stroke-width="3" stroke-dasharray="8 7" marker-end="url(#arrow-red)"/>')
     for name, x, y, key in roles_for(idx):
-        out.append(f'<circle cx="{x}" cy="{y}" r="22" fill="{COLORS.get(key, "#fff")}" stroke="#333" stroke-width="2"/>')
-        out.append(f'<text x="{x}" y="{y + 43}" text-anchor="middle" class="svg-name">{esc(name)}</text>')
+        out.append(f'<g class="point draggable" data-role="point" data-name="{esc(name)}" data-x="{x}" data-y="{y}"><circle cx="{x}" cy="{y}" r="22" fill="{COLORS.get(key, "#fff")}" stroke="#333" stroke-width="2"/><text x="{x}" y="{y + 43}" text-anchor="middle" class="svg-name">{esc(name)}</text></g>')
     if idx <= 14:
         out.append('<circle cx="250" cy="128" r="5" fill="#d9c14a"/><circle cx="263" cy="136" r="4" fill="#d9c14a"/><text x="288" y="126" class="svg-muted">金粉</text>')
-    out.append("</svg>")
+    out.append(
+        '</svg>'
+        '<div class="cam-controls">'
+        '<label>锁定朝向 <select class="preset"><option value="custom">自定义</option><option value="front">正打</option><option value="reverse">反打</option><option value="over">过肩</option><option value="top">俯拍</option><option value="low">仰拍</option></select></label>'
+        '<div class="quick"><button type="button" data-preset="front">正打</button><button type="button" data-preset="reverse">反打</button><button type="button" data-preset="over">过肩</button><button type="button" data-preset="top">俯拍</button><button type="button" data-preset="low">仰拍</button></div>'
+        '<label>机位环绕 <input class="orbit" type="range" min="-180" max="180" value="0"><output>0°</output></label>'
+        '<label>镜头距离 <input class="distance" type="range" min="40" max="260" value="150"><output>150px</output></label>'
+        '<label>FOV <input class="fov-slider" type="range" min="18" max="90" value="48"><output>48°</output></label>'
+        '<label>俯仰角 <input class="pitch" type="range" min="-45" max="45" value="0"><output>平拍 0°</output></label>'
+        '<div class="save-row"><button type="button" class="save-shot">保存本镜头</button><button type="button" class="export-shot">导出JSON</button><button type="button" class="reset-shot">重置</button><span class="save-status"></span></div>'
+        '</div></div>'
+    )
     return "".join(out)
 
 
@@ -181,6 +193,169 @@ PANEL_SPLITS = {
     4: [0, 470, 940, 1298, 1881],
     5: [0, 418, 837, 1256, 1672],
 }
+
+INTERACTIVE_CAMERA_SCRIPT = r"""
+<script>
+(() => {
+  const clamp = (v, min, max) => Math.max(min, Math.min(max, v));
+  const storageKey = (shot) => "seedance-cam-" + shot;
+  function svgPoint(svg, event) {
+    const p = svg.createSVGPoint();
+    p.x = event.clientX;
+    p.y = event.clientY;
+    return p.matrixTransform(svg.getScreenCTM().inverse());
+  }
+  function xy(node) { return { x: Number(node.dataset.x), y: Number(node.dataset.y) }; }
+  function movePoint(node, x, y) {
+    x = clamp(x, 10, 350); y = clamp(y, 10, 350);
+    node.dataset.x = x; node.dataset.y = y;
+    const c = node.querySelector("circle"), t = node.querySelector("text");
+    c.setAttribute("cx", x); c.setAttribute("cy", y);
+    t.setAttribute("x", x); t.setAttribute("y", y + 43);
+  }
+  function moveCam(node, x, y) {
+    x = clamp(x, 10, 350); y = clamp(y, 10, 350);
+    node.dataset.x = x; node.dataset.y = y;
+    const poly = node.querySelector("polygon"), text = node.querySelector("text");
+    poly.setAttribute("points", `${x - 20},${y + 16} ${x + 20},${y + 16} ${x},${y - 24}`);
+    text.setAttribute("x", x); text.setAttribute("y", y + 42);
+  }
+  function target(widget) {
+    const pts = [...widget.querySelectorAll(".point")].map(xy);
+    if (!pts.length) return { x: 180, y: 170 };
+    return {
+      x: pts.reduce((s, p) => s + p.x, 0) / pts.length,
+      y: pts.reduce((s, p) => s + p.y, 0) / pts.length,
+    };
+  }
+  function render(widget) {
+    const cam = xy(widget.querySelector(".cam-node"));
+    const tar = target(widget);
+    const fov = Number(widget.querySelector(".fov-slider").value);
+    const dist = Number(widget.querySelector(".distance").value);
+    const angle = Math.atan2(tar.y - cam.y, tar.x - cam.x);
+    const spread = (fov * Math.PI / 180) / 2;
+    const left = { x: cam.x + Math.cos(angle - spread) * dist, y: cam.y + Math.sin(angle - spread) * dist };
+    const right = { x: cam.x + Math.cos(angle + spread) * dist, y: cam.y + Math.sin(angle + spread) * dist };
+    widget.querySelector(".fov-cone").setAttribute("d", `M ${cam.x} ${cam.y} L ${left.x} ${left.y} L ${right.x} ${right.y} Z`);
+    const aim = widget.querySelector(".aim-line");
+    aim.setAttribute("x1", cam.x); aim.setAttribute("y1", cam.y);
+    aim.setAttribute("x2", tar.x); aim.setAttribute("y2", tar.y);
+    widget.querySelector(".fov-slider + output").textContent = Math.round(fov) + "°";
+    widget.querySelector(".distance + output").textContent = Math.round(dist) + "px";
+    const pitch = Number(widget.querySelector(".pitch").value);
+    widget.querySelector(".pitch + output").textContent = (pitch === 0 ? "平拍 " : (pitch > 0 ? "俯拍 +" : "仰拍 ")) + pitch + "°";
+  }
+  function applyOrbit(widget) {
+    const tar = target(widget);
+    const dist = Number(widget.querySelector(".distance").value);
+    const orbit = Number(widget.querySelector(".orbit").value) * Math.PI / 180;
+    const x = tar.x + Math.cos(-Math.PI / 2 + orbit) * dist;
+    const y = tar.y + Math.sin(-Math.PI / 2 + orbit) * dist;
+    moveCam(widget.querySelector(".cam-node"), x, y);
+    widget.querySelector(".orbit + output").textContent = widget.querySelector(".orbit").value + "°";
+    render(widget);
+  }
+  function stateOf(widget) {
+    return {
+      shot: widget.dataset.shot,
+      camera: xy(widget.querySelector(".cam-node")),
+      controls: {
+        orbit: Number(widget.querySelector(".orbit").value),
+        distance: Number(widget.querySelector(".distance").value),
+        fov: Number(widget.querySelector(".fov-slider").value),
+        pitch: Number(widget.querySelector(".pitch").value),
+        preset: widget.querySelector(".preset").value,
+      },
+      points: [...widget.querySelectorAll(".point")].map((node) => ({ name: node.dataset.name, ...xy(node) })),
+    };
+  }
+  function applyState(widget, state) {
+    if (!state) return;
+    const byName = new Map((state.points || []).map((p) => [p.name, p]));
+    widget.querySelectorAll(".point").forEach((node) => {
+      const saved = byName.get(node.dataset.name);
+      if (saved) movePoint(node, saved.x, saved.y);
+    });
+    if (state.camera) moveCam(widget.querySelector(".cam-node"), state.camera.x, state.camera.y);
+    const c = state.controls || {};
+    if (c.orbit !== undefined) widget.querySelector(".orbit").value = c.orbit;
+    if (c.distance !== undefined) widget.querySelector(".distance").value = c.distance;
+    if (c.fov !== undefined) widget.querySelector(".fov-slider").value = c.fov;
+    if (c.pitch !== undefined) widget.querySelector(".pitch").value = c.pitch;
+    if (c.preset) widget.querySelector(".preset").value = c.preset;
+    render(widget);
+  }
+  function preset(widget, name) {
+    const orbit = widget.querySelector(".orbit"), pitch = widget.querySelector(".pitch"), fov = widget.querySelector(".fov-slider");
+    if (name === "front") { orbit.value = 0; pitch.value = 0; }
+    if (name === "reverse") { orbit.value = 180; pitch.value = 0; }
+    if (name === "over") { orbit.value = -28; pitch.value = 0; fov.value = 42; }
+    if (name === "top") { orbit.value = 0; pitch.value = 35; fov.value = 38; }
+    if (name === "low") { orbit.value = 0; pitch.value = -25; fov.value = 44; }
+    widget.querySelector(".preset").value = name;
+    applyOrbit(widget);
+  }
+  function bind(widget) {
+    const svg = widget.querySelector("svg");
+    let dragging = null;
+    svg.addEventListener("pointerdown", (event) => {
+      const node = event.target.closest(".draggable");
+      if (!node) return;
+      dragging = node;
+      svg.setPointerCapture(event.pointerId);
+      event.preventDefault();
+    });
+    svg.addEventListener("pointermove", (event) => {
+      if (!dragging) return;
+      const p = svgPoint(svg, event);
+      if (dragging.dataset.role === "camera") moveCam(dragging, p.x, p.y);
+      else movePoint(dragging, p.x, p.y);
+      widget.querySelector(".preset").value = "custom";
+      render(widget);
+    });
+    svg.addEventListener("pointerup", (event) => {
+      dragging = null;
+      try { svg.releasePointerCapture(event.pointerId); } catch (error) {}
+    });
+    widget.querySelectorAll("input[type='range']").forEach((input) => input.addEventListener("input", () => {
+      widget.querySelector(".preset").value = "custom";
+      if (input.classList.contains("orbit") || input.classList.contains("distance")) applyOrbit(widget);
+      else render(widget);
+    }));
+    widget.querySelector(".preset").addEventListener("change", (event) => preset(widget, event.target.value));
+    widget.querySelectorAll(".quick button").forEach((btn) => btn.addEventListener("click", () => preset(widget, btn.dataset.preset)));
+    widget.querySelector(".save-shot").addEventListener("click", () => {
+      localStorage.setItem(storageKey(widget.dataset.shot), JSON.stringify(stateOf(widget)));
+      const status = widget.querySelector(".save-status");
+      status.textContent = "已保存本镜头参数";
+      setTimeout(() => status.textContent = "", 1800);
+    });
+    widget.querySelector(".export-shot").addEventListener("click", () => {
+      const blob = new Blob([JSON.stringify(stateOf(widget), null, 2)], { type: "application/json;charset=utf-8" });
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = widget.dataset.shot + "_camera_fov.json";
+      a.click();
+      URL.revokeObjectURL(a.href);
+    });
+    widget.querySelector(".reset-shot").addEventListener("click", () => {
+      localStorage.removeItem(storageKey(widget.dataset.shot));
+      location.reload();
+    });
+    const saved = localStorage.getItem(storageKey(widget.dataset.shot));
+    if (saved) {
+      try { applyState(widget, JSON.parse(saved)); } catch (error) { render(widget); }
+    } else {
+      const cam = xy(widget.querySelector(".cam-node")), tar = target(widget);
+      widget.querySelector(".distance").value = Math.round(clamp(Math.hypot(cam.x - tar.x, cam.y - tar.y), 40, 260));
+      render(widget);
+    }
+  }
+  document.querySelectorAll(".cam-widget").forEach(bind);
+})();
+</script>
+"""
 
 
 def png_size(path: Path) -> tuple[int, int]:
@@ -329,7 +504,7 @@ def build() -> None:
     html_parts: list[str] = []
     html_parts.append(
         """<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>第四集导演分镜表</title><style>
-:root{--paper:#f8f4ec;--ink:#202020;--muted:#666;--line:#d7ccbd;--gold:#b8872f;--blue:#426d9b;--red:#a85750;}*{box-sizing:border-box} body{margin:0;background:#e7e1d7;color:var(--ink);font-family:"Microsoft YaHei","Noto Sans SC",Arial,sans-serif;} .shell{width:min(98vw,2400px);max-width:none;margin:0 auto;padding:28px;} .hero{background:#fffaf2;border:1px solid var(--line);padding:26px 30px;border-radius:8px;margin-bottom:20px;} h1{font-size:34px;line-height:1.2;margin:0 0 12px;} .meta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px 18px;color:#51493f;font-size:15px}.stats{margin-top:12px;font-weight:700;color:#7a4c20}.shot{display:grid;grid-template-columns:minmax(760px,1.35fr) minmax(460px,.9fr) minmax(360px,430px);gap:18px;align-items:start;background:#fffdf8;border:1px solid var(--line);border-radius:8px;padding:18px;margin:18px 0;break-inside:avoid;} .head{grid-column:1/-1;display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;border-bottom:1px solid var(--line);padding-bottom:12px}.shot-id{font-size:26px;font-weight:900;color:#7a4c20}.shot-title{font-size:20px;font-weight:800}.badge{background:#f0e7d8;border:1px solid #dbcbb5;border-radius:999px;padding:6px 12px;font-weight:700;color:#5e5144}.sketch-window{border:1px solid #c9c1b8;border-radius:8px;overflow:hidden;background:#eee}.sketch-window img{width:100%;height:auto;display:block}.caption{font-size:13px;color:var(--muted);margin-top:8px}.notes{display:grid;gap:9px;align-content:start}.field{border-bottom:1px dashed #ded4c7;padding-bottom:8px}.label{font-size:13px;color:#8a6a35;font-weight:800;margin-bottom:3px}.value{font-size:15px;line-height:1.55}.dialogue{font-size:16px;line-height:1.65;background:#fbf7ef;border-left:4px solid #d9a24e;padding:12px 14px;border-radius:6px}.sound{color:#6a6a6a}.blocking{background:#fbfaf7;border:1px solid #c9c1b8;border-radius:8px;padding:10px}.blocking-svg{width:100%;height:auto;display:block}.svg-name{font-size:15px;font-weight:800;fill:#222}.svg-muted{font-size:13px;font-weight:700;fill:#6d655d}.svg-cam{font-size:15px;font-weight:900;fill:#426d9b}.summary{background:#fffaf2;border:1px solid var(--line);border-radius:8px;padding:18px;margin-top:22px}.summary table{width:100%;border-collapse:collapse;font-size:15px}.summary th,.summary td{border:1px solid var(--line);padding:9px;text-align:left}.summary th{background:#f0e7d8}@media(max-width:1500px){.shot{grid-template-columns:1fr 1fr}.blocking{grid-column:1/-1}.meta{grid-template-columns:1fr 1fr}}@media(max-width:980px){.shot{grid-template-columns:1fr}.meta{grid-template-columns:1fr}}@media print{body{background:white}.shell{max-width:none;width:100%;padding:0}.shot{page-break-inside:avoid}}
+:root{--paper:#f8f4ec;--ink:#202020;--muted:#666;--line:#d7ccbd;--gold:#b8872f;--blue:#426d9b;--red:#a85750;}*{box-sizing:border-box} body{margin:0;background:#e7e1d7;color:var(--ink);font-family:"Microsoft YaHei","Noto Sans SC",Arial,sans-serif;} .shell{width:min(98vw,2400px);max-width:none;margin:0 auto;padding:28px;} .hero{background:#fffaf2;border:1px solid var(--line);padding:26px 30px;border-radius:8px;margin-bottom:20px;} h1{font-size:34px;line-height:1.2;margin:0 0 12px;} .meta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px 18px;color:#51493f;font-size:15px}.stats{margin-top:12px;font-weight:700;color:#7a4c20}.shot{display:grid;grid-template-columns:minmax(760px,1.35fr) minmax(460px,.9fr) minmax(360px,430px);gap:18px;align-items:start;background:#fffdf8;border:1px solid var(--line);border-radius:8px;padding:18px;margin:18px 0;break-inside:avoid;} .head{grid-column:1/-1;display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;border-bottom:1px solid var(--line);padding-bottom:12px}.shot-id{font-size:26px;font-weight:900;color:#7a4c20}.shot-title{font-size:20px;font-weight:800}.badge{background:#f0e7d8;border:1px solid #dbcbb5;border-radius:999px;padding:6px 12px;font-weight:700;color:#5e5144}.sketch-window{border:1px solid #c9c1b8;border-radius:8px;overflow:hidden;background:#eee}.sketch-window img{width:100%;height:auto;display:block}.caption{font-size:13px;color:var(--muted);margin-top:8px}.notes{display:grid;gap:9px;align-content:start}.field{border-bottom:1px dashed #ded4c7;padding-bottom:8px}.label{font-size:13px;color:#8a6a35;font-weight:800;margin-bottom:3px}.value{font-size:15px;line-height:1.55}.dialogue{font-size:16px;line-height:1.65;background:#fbf7ef;border-left:4px solid #d9a24e;padding:12px 14px;border-radius:6px}.sound{color:#6a6a6a}.blocking{background:#fbfaf7;border:1px solid #c9c1b8;border-radius:8px;padding:10px}.blocking-svg{width:100%;height:auto;display:block}.svg-name{font-size:15px;font-weight:800;fill:#222}.svg-muted{font-size:13px;font-weight:700;fill:#6d655d}.svg-cam{font-size:15px;font-weight:900;fill:#426d9b}.draggable{cursor:grab}.draggable:active{cursor:grabbing}.point text,.cam-node text{pointer-events:none;user-select:none}.cam-controls{display:grid;gap:9px;background:#fff7ea;border:1px solid #dbcbb3;border-radius:8px;padding:10px;margin-top:10px}.cam-controls label{display:grid;grid-template-columns:72px 1fr 52px;align-items:center;gap:8px;font-size:13px;color:#5b4428}.cam-controls select{grid-column:2/span 2;border:1px solid #d0bea5;border-radius:6px;background:#fffdf8;padding:5px 8px}.cam-controls input[type=range]{width:100%;accent-color:#2f6f9f}.cam-controls output{text-align:right;font-variant-numeric:tabular-nums;color:#6a4f2d}.quick{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}.quick button,.save-row button{border:1px solid #d2b58d;background:#f1e2c9;color:#5b3c18;border-radius:7px;padding:7px 6px;font-weight:700;cursor:pointer}.quick button:hover,.save-row button:hover{background:#e4d0ad}.save-row{display:grid;grid-template-columns:1fr 1fr 72px;gap:6px;align-items:center}.save-status{grid-column:1/-1;color:#2d6c3f;font-size:12px;min-height:16px}.summary{background:#fffaf2;border:1px solid var(--line);border-radius:8px;padding:18px;margin-top:22px}.summary table{width:100%;border-collapse:collapse;font-size:15px}.summary th,.summary td{border:1px solid var(--line);padding:9px;text-align:left}.summary th{background:#f0e7d8}@media(max-width:1500px){.shot{grid-template-columns:1fr 1fr}.blocking{grid-column:1/-1}.meta{grid-template-columns:1fr 1fr}}@media(max-width:980px){.shot{grid-template-columns:1fr}.meta{grid-template-columns:1fr}}@media print{body{background:white}.shell{max-width:none;width:100%;padding:0}.shot{page-break-inside:avoid}}
 </style></head><body><div class="shell"><svg width="0" height="0" style="position:absolute"><defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#426d9b"/></marker><marker id="arrow-red" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#bd6b61"/></marker></defs></svg>"""
     )
     html_parts.append(f'<section class="hero"><h1>{esc(title)}｜导演分镜表 + 草图 + 人物关系位置图</h1><div class="meta">')
@@ -367,7 +542,7 @@ def build() -> None:
         html_parts.append("</div>")
         html_parts.append(
             f'<div class="blocking"><div class="label">人物关系位置图 / CAM + FOV</div>{svg_diagram(shot, idx)}'
-            '<div class="caption">圆点为人物/空间锚点；蓝色为镜头视角，红色虚线为推进或跟拍方向。</div></div>'
+            '<div class="caption">圆点为人物/空间锚点；蓝色为镜头视角，红色虚线为机位朝向或推进方向。拖动圆点可调整人物/道具位置，拖动相机或滑块可微调机位，支持单镜头保存和导出 JSON。</div></div>'
         )
         html_parts.append("</article>")
 
@@ -376,7 +551,7 @@ def build() -> None:
         '<tr><td>音频</td><td>禁止背景音乐；仅保留角色语音、环境声、动作音效。镜头表中的原音乐设计不进入本版导演分镜。</td></tr>'
         '<tr><td>字幕</td><td>全片禁止字幕、标题字、说明字、屏幕文字叠加。草图与页面也避免把对白塞进画面区。</td></tr>'
         '<tr><td>连续性</td><td>顾灵薇金粉状态从 4-1 延续到 4-14；谢临舟从回廊入场并离场；苏明舒视线在 4-19 后持续追随回廊方向。</td></tr>'
-        "</table></section></div></body></html>"
+        "</table></section></div>" + INTERACTIVE_CAMERA_SCRIPT + "</body></html>"
     )
 
     (OUT_DIR / "ep4_director_storyboard.html").write_text("\n".join(html_parts), encoding="utf-8")
