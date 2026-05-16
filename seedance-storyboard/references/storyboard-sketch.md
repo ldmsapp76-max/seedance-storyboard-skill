@@ -14,6 +14,49 @@
 - 重要情绪节拍和揭示。
 - 视频段首帧/尾帧的连续性。
 
+## 产物边界与交付门槛
+
+不要混用以下三类产物：
+
+- `storyboard_sketch`：真实导演分镜草图。必须是图像模型、人工绘制或等效视觉绘制结果，画面中应有可识别的人物体块、服装/时代感、场景纵深、光影或调子，能够支持影视画面审阅。
+- `blocking_diagram`：人物关系位置图。可以使用圆点、箭头、`CAM`、FOV、俯视站位和标签；它只说明空间关系，不能放入“草图”列冒充分镜草图。
+- `deterministic_placeholder`：PIL/SVG/HTML 生成的临时占位图、火柴人图、几何线框或标签图。只能用于调试版式或说明结构，不能标记为最终草图。
+
+当用户要求“分镜草图”“分组草图”“导演分镜草图”时，最终 `shots/` 和 `video_groups/` 必须是 `storyboard_sketch`。如果当前环境不能调用图像模型，应停止在 brief + 位置图阶段，并明确说明“尚未生成真实分镜草图”；不要生成火柴人占位图后宣称完成。
+
+在 Codex 中直接调用 Image 2.0 时，生成图片会默认落盘到：
+
+```text
+%USERPROFILE%\.codex\generated_images\<session>\*.png
+```
+
+导入到当前分镜包时使用：
+
+```bash
+python scripts/import_codex_image.py <output_dir> --shot-id SHOT-05
+python scripts/import_codex_image.py <output_dir> --segment-id SEG-02
+```
+
+该脚本会复制最新生成图到 `shots/` 或 `video_groups/`，并更新 `sketch_manifest.json`。保留 `.codex/generated_images` 原图，不要删除原始文件。
+
+每次生成图片成果物时，在输出目录写入 `sketch_manifest.json`：
+
+```json
+{
+  "shots": [
+    {
+      "shot_id": "SHOT-01",
+      "path": "shots/SHOT-01.png",
+      "source_type": "image_model",
+      "deliverable_role": "storyboard_sketch",
+      "qa_status": "needs_review"
+    }
+  ]
+}
+```
+
+`source_type` 常用值：`image_model`、`manual_art`、`deterministic_placeholder`、`blocking_diagram`。`deliverable_role` 常用值：`storyboard_sketch`、`blocking_diagram`、`layout_placeholder`。如果 `shots/` 中任何图片不是 `storyboard_sketch`，出图 QA 必须记为 P1 并阻止最终交付。
+
 ## 选择规则
 
 根据用户要求选择草图范围：
@@ -78,6 +121,7 @@
 - 桌面审阅页优先用宽工作布局，不用窄手机长图；草图列保持较大，说明和 SVG 站位图放在旁边。
 - 如果用户要求每个镜头都有图，把图像生成拆成小型分镜表，通常每张生成图 4-5 格。不要把全部镜头硬塞进一张生成图。
 - 除非用户明确要求音乐，生成的导演页不要出现背景音乐字段。Seedance 导向输出中，音频只保留角色语音、环境音和动作音效。
+- HTML 总表必须分列：左栏是真实 `storyboard_sketch`，右栏是 `blocking_diagram`。不要把站位图缩略图放在草图栏。
 
 ### 生成图切片规则
 
@@ -211,27 +255,111 @@ Camera is behind Gu Lingwei's shoulder, almost Gu Lingwei POV. Viewer stands on 
 - 图像 prompt 避免字幕和非剧情文字。
 
 如果草图暴露连续性问题，先修复镜头/视频段，再更新草图 brief。
+
+## 出图后视觉 QA 与返修
+
+当已经生成分组草图、单镜头切片、QA 拼版或导演总表时，必须在最终交付前做一轮视觉 QA。这个检查发生在内容 QA 之后，重点不是剧本是否成立，而是“生成出来的图是否忠实执行了提示词和人物关系位置图”。
+
+### 检查顺序
+
+1. 结构检查：确认 `video_groups/`、`shots/`、`qa_sheet_*.png`、HTML 总表和 PNG 总表都存在，镜头数量与 `Shot List` 一致。
+2. 切片检查：确认每张分组草图切出的单镜头数量正确，`shots/SHOT-xx.png` 没有错位、漏切、重复或裁掉主体。
+3. 单镜头检查：逐张对照 `Shot List` 的景别、机位、Blocking、Action，以及 `Storyboard Sketch Briefs` 的人物、道具、构图和连续性目的。
+4. 位置图检查：对照人物关系位置图里的 `screen-left / center / screen-right`、前中后景、视线方向、CAM、镜头方向和 FOV。
+5. 成果物检查：确认返修后的单图已同步进入分组图、QA 拼版、HTML 总表和 PNG 总表。
+
+### 严重程度
+
+- `P0 必修`：缺图、错图、切片错位、总表引用不存在、黑场出现文字/边框/纹理、镜头内容完全不符、角色身份严重错误。
+- `P1 应修`：人物左右关系反、关键道具缺失或归属错误、景别明显错误、动作因果错位、人物形态阶段错误、方向性道具指向错误、火柴人/几何占位图被当作分镜草图交付、`shots/` 中图片 manifest 不是 `storyboard_sketch`。
+- `P2 可优化`：构图弱、表情不够准、背景层次不足、群体规模偏小、画幅不统一但不影响当前审阅、草图质感不一致。
+
+默认规则：P0/P1 必须返修；P2 记录在 `Visual QA & Repair Notes`，只有在时间允许或用户要求精修时返修。
+
+### 必检项
+
+- 画幅和尺寸：默认应接近 `9:16 vertical`；如果是从多格分组图切片，允许记录为 P2，但最终视频首帧用途必须返修为 9:16。
+- 黑场：黑场镜头必须无人物、无字幕、无边框、无渐变、无纹理；可直接用确定性纯黑 PNG 替换，不依赖图像模型生成。
+- 草图真实度：分镜草图必须有真实人物/场景草图形态。圆头线段火柴人、纯几何矩形、仅含标签的站位图、PIL/SVG 占位图都不是合格草图。
+- Manifest：`sketch_manifest.json` 必须存在，并且 `shots/SHOT-xx.png` 标记为 `source_type=image_model` 或 `manual_art`，`deliverable_role=storyboard_sketch`。标记为 `deterministic_placeholder` 或 `blocking_diagram` 的图片不得进入最终草图栏。
+- 人物位置：所有写明 `screen-left / center / screen-right` 的人物必须与镜头表和位置图一致，除非镜头明确重建轴线。
+- 景别：手部特写、掌心特写、微距、极近反应不能生成成普通中景；全景/鸟瞰不能裁掉空间关系。
+- 道具：触发剧情的绳结、木棍、箭、箭洞、弯刀、黑水池、掌心倒影、轿辇等必须可见且状态正确。
+- 角色形态：凡人形态和神王形态不能提前或延后混淆；发型、肤色、服装、身份标记要与 Continuity Bible 一致。
+- 禁文字：分镜草图不得出现字幕、标题字、对白气泡、解释字、水印；所有真实文字说明必须由 HTML/SVG/PPT 等确定性工具叠加。
+
+### 返修流程
+
+1. 先列出问题镜头，不要直接重出全套图。
+2. 为每张问题图写窄化返修 prompt，只修失败项，并明确保留已经正确的主体、风格、画幅和连续性。
+3. P0/P1 图重出后覆盖对应 `shots/SHOT-xx.png`；如果问题来自分组原图，更新对应 `video_groups/SEG-xx_group_image2.png` 和 `SEG-xx_group.png`。
+4. 返修后重新生成或刷新 `qa_sheet_*.png`、HTML 总表、PNG 总表。
+5. 再做一次抽查，确认返修图已进入所有下游成果物。
+
+### QA 报告格式
+
+出图交付时，如果发现并修复过问题，新增紧凑的 `Visual QA & Repair Notes`：
+
+| Severity | Shot | Issue Type | Expected | Observed | Fix |
+|---|---|---|---|---|---|
+
+常用 `Issue Type`：
+
+- `missing_file`
+- `slice_error`
+- `aspect_ratio`
+- `bad_black_frame`
+- `position_mismatch`
+- `shot_size_mismatch`
+- `missing_prop`
+- `wrong_identity`
+- `wrong_action`
+- `text_artifact`
+- `missing_sketch_manifest`
+- `blocking_placeholder_not_storyboard`
+- `sketch_quality_mismatch`
+- `wrong_deliverable_role`
+- `downstream_not_refreshed`
+
+如果没有 P0/P1 问题，写：
+
+```text
+Visual QA: 未发现 P0/P1 出图问题；剩余风险为草图模型可能存在的表情、群演规模或局部质感随机性。
+```
+
+### 脚本辅助检查
+
+可运行：
+
+```bash
+python scripts/visual_qa.py <output_dir>
+```
+
+该脚本会做结构性检查、manifest 检查，以及“大片空白 + 低墨线覆盖”的占位图启发式检查。它能发现常见火柴人/几何占位图冒充分镜草图的问题；人物左右、道具语义、景别是否真正符合提示词，仍必须通过 QA 拼版或单图视觉审阅完成。
 ## 固定交付格式：视频分组草图 -> 单镜头切割 -> 总表
 
 当用户要求“按之前的方式”“固定当前输出格式”“导演分镜草图 + 站位图 + 机位图”，或没有额外指定版式时，严格使用以下交付流程：
 
 1. 先按 Seedance 视频编号生成分组分镜图：每条视频一张 Image 2.0 分组草图，图内包含该视频下的多个镜头面板。通常每张 2-5 格，避免把整集所有镜头塞进一张生成图。
 2. 再把分组草图切割为每个镜头的独立草图文件，放入 `shots/`。最终 HTML 必须引用独立镜头图，不要依赖 CSS 从整图裁切。
-3. 最后生成样张式导演总表：每个镜头一行，左侧是独立分镜草图，中间是导演分镜表信息，右侧是人物关系位置图 / `CAM` + `FOV` 机位图。
-4. 同步输出以下文件：
+3. 切片后先生成 QA 拼版，并执行“出图后视觉 QA 与返修”；P0/P1 问题图修复完成后，才能进入最终总表。
+4. 最后生成样张式导演总表：每个镜头一行，左侧是独立分镜草图，中间是导演分镜表信息，右侧是人物关系位置图 / `CAM` + `FOV` 机位图。
+5. 同步输出以下文件：
    - `*_director_full_table.html`：可浏览总表。
    - `*_director_full_table.png`：长图总表。
    - `*_director_full_table.md`：文字版镜头表。
    - `shots/`：每个镜头一张切割后的 Image 2.0 草图。
    - `video_groups/`：按视频编号生成的分组草图原图。
+   - `qa_sheet_*.png`：出图 QA 拼版。
+   - `visual_qa_report.md` / `visual_qa_report.json`：结构检查和返修记录，若本次执行过 QA。
    - `refs/`：用户提供或本次使用的场景参考图，若有。
-5. 总表顶部必须包含：标题、故事简介、视频/时长/镜头统计、角色锁定、视觉/场景说明。
-6. 每行固定结构：
+6. 总表顶部必须包含：标题、故事简介、视频/时长/镜头统计、角色锁定、视觉/场景说明。
+7. 每行固定结构：
    - Header：`镜头号`、`景别`、`拍摄视角`、`运镜`、`时长`。
    - 左栏：Image 2.0 分镜草图。
    - 中栏：`设备/镜头`、`站位调度`、`画面 + 台词 + 声音`、`转场`。
    - 右栏：人物站位图，必须包含角色圆点、关键场景/道具、`CAM`、方向箭头和浅色 `FOV` 扇形。
-7. 除非用户明确要求背景音乐，总表和提示词都不要出现 BGM 字段；音频只写角色语音、环境声和动作音效。
+8. 除非用户明确要求背景音乐，总表和提示词都不要出现 BGM 字段；音频只写角色语音、环境声和动作音效。
 
 ## Image 2.0 分镜草图固定质量提示词
 
